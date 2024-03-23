@@ -1,25 +1,11 @@
-h1, h2 {
-    text-align: center;
-}
-
+/* Fonts */
  h1 {
     font-family: "Roboto", sans-serif;
     font-weight: 400;
     font-style: normal;
     font-size: 75px;
     margin-top: 25px;
-  }
-  
-  .box {
-    height: 75px; 
-    width: 100%;
-    background-color: rgb(226, 217, 195);
-    margin-left: 0px;
-    margin-right: 0px;
-    margin-top: -100px;
-    text-align: center;
-    text-align: top;
-  }
+ }
   
   h2 {
     font-family: "Roboto", sans-serif;
@@ -28,3 +14,33 @@ h1, h2 {
     font-size: 35px;
     margin-top: 10px;
   }
+
+  p {
+    font-family: "Roboto", sans-serif;
+    font-weight: 200;
+    font-style: normal;
+    font-size: 16px;
+    margin-top: 25px;
+  }
+
+  .portfolio-text {
+    text-align: center;
+}
+
+.name-text {
+    margin-top: 38px;
+}
+
+.box {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 150px;
+    width: 100%;
+    background-color: rgb(226, 217, 195);
+    margin: 0;
+    text-align: center;
+  }
+  
+
+
