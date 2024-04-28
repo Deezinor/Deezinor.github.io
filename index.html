@@ -10,7 +10,7 @@
 </head>
 <body>
     <nav id="desktop-nav">
-        <div class="logo">Jake Boulton</div>
+        <div class="logo">JB</div>
             <div>
                 <ul class="nav-links">
                     <li><a href="#about">About</a></li>
@@ -19,41 +19,54 @@
                     <li><a href="#Contact">Contact</a></li>
                 </ul>
             </div>
-        </nav>
-        <nav id="hamburger-nav">
-            <div class="logo">Jake Boulton</div>
-            <div class="hamburger-menu">
-                <div class="hamburger-icon" onclick="toggleMenu()">
-                    <span></span>
-                    <span></span>
-                    <span></span>
-                </div>
-                <div class="menu-links">
-                    <li><a href="#about" onclick="toggleMenu()">About</a></li>
-                    <li><a href="#Experience" onclick="toggleMenu()">Experience</a></li>
-                    <li><a href="#Projects" onclick="toggleMenu()">Projects</a></li>
-                    <li><a href="#Contact" onclick="toggleMenu()">Contact</a></li>
-                </div>
+        </div>
+    </nav>
+    <div class="nav_shadow"></div>
+    <nav id="hamburger-nav">
+        <div class="logo">Jake Boulton</div>
+        <div class="hamburger-menu">
+            <div class="hamburger-icon" onclick="toggleMenu()">
+                <span></span>
+                <span></span>
+                <span></span>
             </div>
-        </nav>
+            <div class="menu-links">
+                <li><a href="#about" onclick="toggleMenu()">About</a></li>
+                <li><a href="#Experience" onclick="toggleMenu()">Experience</a></li>
+                <li><a href="#Projects" onclick="toggleMenu()">Projects</a></li>
+                <li><a href="#Contact" onclick="toggleMenu()">Contact</a></li>
+            </div>
+        </div>
+    </nav>
     <section class="profile">
         <div class="section__pic-container">
             <img src="./assets/Graduation photo.jpg" alt="Profile Picture" href="'./#index'">
         </div>
         <div class="section__text">
-            <p class="section__text__p1">
-                Hello I'm
-            </p>
-            <h1>Jake Boulton</h1>
+            <div class="name_block">
+                <p class="section__text__p1">Hi there, <br>I'm</p>
+                <h1>Jake Boulton</h1>
+            </div>
+            <br>
             <p class="section__text__p2">Product Designer <p class="letters">(BSc)</p> and XR Developer <p class="letters">(MA)</p>.
             </p>
             <div class="btn-container">
-                <button class="btn-color-2" onclick="window.open('./assets/Jake Boulton - Cirriculum vitae.docx.pdf')">Download CV</button>
+                <button class="btn-color-2" onclick="window.open('./assets/Jake Boulton - CV.pdf')">Download CV</button>
                 <button class="btn-color-1" onclick="location.href='./#contact'">Contact Info</button>
             </div>
             <div id="socials-container">
-                <img src="./assets/linkedin.png" alt="My LinkedIn Profile" class="icon" onclick="location.href='https://www.linkedin.com/in/jake-m-boulton/'">
-                <img src="./assets/github.png" alt="My GitHub Profile" class="icon" onclick="location.href='https://github.com/Deezinor'">
+                <img 
+                src="./assets/linkedin.png" 
+                alt="My LinkedIn Profile" 
+                class="icon" 
+                onclick="location.href='https://www.linkedin.com/in/jake-m-boulton/'" 
+                />
+                <img 
+                src="./assets/Github_Logo.png" 
+                alt="My GitHub Profile" 
+                class="icon" 
+                onclick="location.href='https://github.com/Deezinor'" 
+                />
             </div>
         </div>
     </section>
