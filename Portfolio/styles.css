@@ -327,11 +327,95 @@ section
   display: flex;
   align-items: center;
   justify-content: center;
+  font-size: 10px;
+  font-weight: 200;
 }
 
 /* About */
 
 .about-section
 {
+  display: flex;
+  flex-direction: row;
+  gap: 100px;
+  padding-left: 200px;
+  padding-right: 200px;
+  padding-top:100px;
+}
+
+.about-container-1
+{
+  display: flex;
+  flex-direction: column;
+  align-content: start;
+  gap: 20px;
+}
+
+.container-1a
+{
+  display: flex;
+  align-items: baseline;
+  gap: 25px;
+}
+
+.container-1b
+{
+  display: inline-flex;
+  align-items: baseline;
+  gap: 25px;
+}
+
+.material-symbols-outlined {
+  font-variation-settings:
+  'FILL' 0,
+  'wght' 400,
+  'GRAD' 0,
+  'opsz' 48
+}
+
+.linkedIn_logo {
+  width: 24px; /* Set the width you want */
+  height: auto; /* Maintain the aspect ratio */
+}
+
+.my-photo
+{
+  width: 200px;
+  object-fit: contain;
+  border-radius: 50px;
+}
+
+.Instagram_logo
+{
+  width: 24px;
+  height: auto;
+}
+
+.about-container-2
+{
+  display: flex;
+  flex-direction: column;
+}
+
+.container-2a
+{
+  font-size: 36px;
+  font-weight: 400;
+}
+
+.container-2a-strong
+{
+  font-weight: 300;
+}
   
+.container-2b
+{
+  font-size: 20px;
+  font-weight: 300; 
+}
+    
+.container-2c
+{
+  font-size: 16px;
+  font-weight: 200; 
 }
