@@ -1,0 +1,337 @@
+/* Fonts */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: bold;
+  margin-bottom: 10px;
+  
+}
+h1 {
+  font-size: 38px;
+  line-height: 44px;
+  margin-top: 20px;
+  color: #ffffff;
+}
+h2 {
+  font-size: 32px;
+  line-height: 36px;
+  margin-top: 20px;
+  color: #ffffff;
+}
+h3 {
+  font-size: 24px;
+  line-height: 30px;
+  margin-top: 20px;
+  color: #ffffff;
+}
+h4 {
+  font-size: 18px;
+  line-height: 24px;
+  margin-top: 10px;
+  color: #ffffff;
+}
+h5 {
+  font-size: 14px;
+  line-height: 20px;
+  margin-top: 10px;
+  color: #ffffff;
+}
+h6 {
+  font-size: 12px;
+  line-height: 18px;
+  margin-top: 10px;
+  color: #ffffff;
+}
+p {
+  margin-top: 0;
+  margin-bottom: 10px;
+  color: #ffffff;
+}
+
+/* Body */
+
+.body
+{
+  font-family: Montserrat, sans-serif;
+  color: #ffffff;
+  font-size: 16px;
+  line-height: 28px;
+  font-weight: 400;
+  padding: 0;
+  margin: 0;
+  background-color: #212427;
+}
+
+/* Navigation Bar */
+
+.nav {
+  position: relative;
+  background: #212427;
+  z-index: 1000;
+}
+
+.navigation {
+  display: flex;
+  padding: 30px 50px;
+  align-items: center;
+  background-color: #212427;
+}
+
+.navigation-wrap {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  padding: 10px 0;
+}
+
+.navigation-items 
+{
+  display: flex;
+  flex-direction: row; /* Ensures horizontal layout */
+  justify-content: center;
+  align-items: center;
+  gap: 31px;
+  margin: 0 20%;
+}
+
+.navigation-item {
+  padding: 9px 20px;
+  opacity: 0.8;
+  font-size: 12px;
+  line-height: 20px;
+  font-weight: 500;
+  color: #ffffff;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  text-align: center;
+}
+
+.nav-link {
+  text-decoration: none;
+  color: #222222;
+}
+
+.logo-link {
+  display: flex;
+  align-items: center;
+}
+
+.logo-image {
+  display: block;
+}
+
+.logo-text
+{
+  font-weight: 300;
+}
+
+.logo-strong
+{
+  font-weight: 600;
+}
+
+a {
+  transition: opacity 200ms ease;
+  color: rgb(26, 27, 31);
+  text-decoration: underline;
+  background-color: transparent;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+section
+{
+  margin: 0 40px;
+}
+
+/* Section 1 */
+
+.introduction-container
+{
+  margin: 0 auto;
+  width: 100%;
+  height: auto;
+  max-width: 1140px;
+  position: static;
+}
+
+.introduction-wrap
+{
+  margin: 100px 0 140px;
+  padding: 0;
+  position: static;
+}
+
+.introduction-name-text
+{
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 34px;
+}
+
+.introduction-role-text
+{
+  font-weight: 300;
+  font-size: 16px;
+  line-height: 28px;
+  margin-top: 10px;
+}
+
+.introduction-message-text
+{
+  font-weight: 400;
+  font-size: 64px;
+  line-height: 80px;
+  margin: 10px 0;
+  margin-left: -5px;
+}
+
+.view-projects-container
+{
+  margin: 80px 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.view-projects-wrap
+{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #132159;
+  width: 150px;
+  height: 62px;
+  border-radius: 30px;
+}
+
+.view-projects-txt
+{
+  color: rgb(237, 242, 247);
+  font-weight: 600;
+  line-height: 20px;
+}
+
+/* Section 2 */
+
+.section-2-grid
+{
+  position: static;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  gap: 25px;
+  margin: 20px;
+}
+
+.grid-item {
+  /* background-color: #ddd; */
+  padding: 20px;
+  text-align: center;
+}
+
+.project-name-link
+{
+  margin-bottom: 5px;
+  font-size: 20px;
+  line-height: 34px;
+  color: #1a1b1f;
+  }
+  
+  .project-description
+  {
+    font-size: 16px;
+    font-weight: 300;
+    line-height: 28px;
+    opacity: 0.8;
+    margin-bottom: 60px;
+    width: 100%;
+  }
+
+  .xp-wrap
+  {
+    margin-bottom: 50px;
+    width: 70%;
+    font-weight: 400;
+  }
+
+  .xp-heading
+  {
+    font-size:  36px;
+    line-height: 50px;
+    margin: 10px 0;
+    position: static;
+  }
+
+  .xp-description
+  {
+    font-size:  16px;
+    line-height: 28px;
+    margin: 0 0 10px;
+    position: static;
+    opacity: 0.8;
+  }
+
+  .xp-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: 1fr;
+    gap: 50px; /* Adjust the gap between grid items if needed */
+  }
+  
+  .wp-grid-item {
+    background-color: #ddd; /* Background color for visibility */
+    padding: 10px;
+    text-align: center;
+    border: 1px solid #ccc; /* Optional: border for each item */
+  }
+
+  .wp-name-txt
+  {
+    font-size: 20px;
+    line-height: 34px;
+    margin-bottom: 10px;
+  }
+  
+  .wp-description-txt
+  {
+    font-size: 16px;
+    line-height: 28px;
+    margin-bottom: 5px;
+    opacity: 0.6;
+  }
+  
+  .wp-dates-txt
+  {
+    font-size: 12px;
+    line-height: 20px;
+    opacity: 0.7;
+  }
+  
+
+/* Featured */
+
+
+/* Other Work */
+
+
+/* Footnote */
+.footnote
+{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* About */
+
+.about-section
+{
+  
+}
