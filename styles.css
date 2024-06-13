@@ -213,9 +213,25 @@ section
 
 .view-projects-txt
 {
-  color: rgb(237, 242, 247);
+  text-decoration: none;
+  color: inherit;
   font-weight: 600;
   line-height: 20px;
+}
+
+.view-projects-txt::after, .view-projects-txt::selection
+{
+  text-decoration: none;
+  color: inherit;
+  font-weight: 600;
+  line-height: 20px;
+}
+
+.introduction-about-link
+{
+  text-decoration: none;
+  color: inherit;
+
 }
 
 /* Section 2 */
@@ -239,15 +255,16 @@ section
 .project-name-link
 {
   margin-bottom: 5px;
-  font-size: 20px;
+  font-size: 28px;
   line-height: 34px;
-  color: #1a1b1f;
+  color: #ffffff;
+  font-weight: 400;
   }
   
   .project-description
   {
     font-size: 16px;
-    font-weight: 300;
+    font-weight: 200;
     line-height: 28px;
     opacity: 0.8;
     margin-bottom: 60px;
