@@ -6,6 +6,7 @@
             <link rel="preconnect" href="https://fonts.googleapis.com">
             <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
             <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+            <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
             <link rel="stylesheet" href="styles.css" />
         </head>
         <body class="body">
@@ -36,11 +37,19 @@
                             Jake Boulton
                         </div>
                         <div class="introduction-role-text">
-                            Award-Winning 3D Artist & UX/XR/Product Designer
+                            Award-Winning 3D Artist & XR Master's Student at Goldsmiths University of London.
                         </div>
                         <div class="introduction-message">
                             <h1 class="introduction-message-text">
-                                Hey there! I'm an XR & 3D Designer based out of London, UK.
+                                Hi! I'm a
+                                <div class="typewriter-container">
+                                    <span id="typewriter"></span>
+                                    <span id="cursor">|</span>
+                                </div>
+                                <script src="script.js"></script>
+                            </h1>
+                            <h1 class="introduction-message-text">
+                                Based out of London, UK.
                             </h1>
                         </div>
                         <a href="about.html" class="introduction-about-link">
@@ -50,43 +59,52 @@
                 </div>
             </section>
             <div class="view-projects-container">
-                <div class="view-projects-wrap">
-                    <div class="view-projects-txt">
-                        <a href="#section-2-container">View Projects</a>
+                <a href="#section-2-container">
+                    <div class="view-projects-wrap">
+                        <div class="view-projects-txt">
+                        View Projects
+                        </div>
                     </div>
-                </div>
+                </a>
             </div>
             <section class="section-2 section">
                 <div id ="section-2-container" class="section-2-container">
                     <div class="section-2-grid">
-                        <div class="bbvr-grid-block grid-item">
-                            <img src="" alt="">
-                            <div class="work-description">
-                                <div class="project-name-link">BeatBox VR</div>
-                                <p class="project-description">Virtual Reality Rhythym Game & Drum Simulator</p>
+                        <a href="xr-design.html#beatboxvr-project">
+                            <div class="bbvr-grid-block grid-item">
+                                <img class="S2-project-images" src="/Assets/BBVR_logo.gif">
+                                <div class="work-description">
+                                    <div class="project-name-link">BeatBox VR</div>
+                                    <p class="project-description">Virtual Reality Rhythym Game & Drum Simulator</p>
+                                </div>
                             </div>
-                        </div>
-                        <div class="altilium-grid-block grid-item">
-                            <img src="" alt="">
-                            <div class="work-description">
-                                <div class="project-name-link">Altilium</div>
-                                <p class="project-description">Battery Powered Induction Camping Stove Design</p>
+                        </a>
+                        <a href="product-design.html#altilium-project">
+                            <div class="altilium-grid-block grid-item">
+                                <img class="S2-project-images" src="/Assets/2021 Design Pack Main Cover.png">
+                                <div class="work-description">
+                                    <div class="project-name-link">Altilium</div>
+                                    <p class="project-description">Battery Powered Induction Camping Stove Design</p>
+                                </div>
                             </div>
-                        </div>
-                        <div class="caspian-house-grid-block grid-item">
-                            <img src="" alt="">
-                            <div class="work-description">
-                                <div class="project-name-link">Caspian House</div>
-                                <p class="project-description">Architectural Visualisation & XR Case Study</p>
+                        </a>
+                        <a href="3d-modelling.html#weapon-set-project" >
+                            <div class="caspian-house-grid-block grid-item">
+                                <img class="S2-project-images" src="/Assets/Weapon-set-turnaround.gif">
+                                <div class="work-description">
+                                    <div class="project-name-link">Weapon Set Case Study</div>
+                                    <p class="project-description">Weapon set modeled from concept art by "insert artist name"</p>
+                                </div>
                             </div>
-                        </div>
-                        <div class="archviz-2-grid-block grid-item">
+                        </a>
+<!-- TODO: Finish Caspian House Project -->
+                        <!-- <div class="archviz-2-grid-block grid-item">
                             <img src="" alt="">
                             <div class="work-description">
                                 <div class="project-name-link">Archviz 2</div>
                                 <p class="project-description">Architectural Visualisation & XR Case Study</p>
                             </div>
-                        </div>
+                        </div> -->
                     </div>
                 </div>
                 <div class="experience-container">
@@ -115,6 +133,10 @@
             </section>
         </body>
         <footer>
-            <p class="footnote">Built by Jake Boulton</p>
+            <div class="footnote-txt-wrap">
+                <p class="footnote-txt">
+                    Designed & Built by Jake Boulton
+                </p>
+            </div>
         </footer>
     </html>
