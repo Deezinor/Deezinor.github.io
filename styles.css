@@ -80,6 +80,7 @@ p {
   display: flex;
   padding: 30px 50px;
   align-items: center;
+  background-color: #111314;
 }
 
 .navigation-wrap {
@@ -183,7 +184,6 @@ section
   font-weight: 300;
   font-size: 16px;
   line-height: 28px;
-  margin-top: 0;
 }
 
 .introduction-message-text
