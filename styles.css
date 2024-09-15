@@ -16,7 +16,6 @@ h6
 h1 
 {
   font-size: 38px;
-  font-weight: 400;
   line-height: 44px;
   margin-top: 20px;
   color: #ffffff;
@@ -90,13 +89,6 @@ p
 .nav {
   position: relative;
   z-index: 1000;
-}
-
-.nav-bar
-{
-  position: absolute;
-  right: 0;
-  padding-right: 5%;
 }
 
 .navigation {
@@ -291,126 +283,110 @@ section
 
 /*--------------------- Section 2 ---------------------*/
 
-.section-2-grid {
+.section-2-grid
+{
   position: static;
   display: grid;
-  grid-template-columns: repeat(2, 1fr); /* Creates two equal columns */
-  grid-template-rows: repeat(2, 1fr); /* Creates two equal rows */
-  gap: 25px; /* Adds spacing between grid items */
-  margin: 20px; /* Adds space around the grid container */
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  gap: 25px;
+  margin: 20px;
 }
 
 .grid-item {
-  display: flex;
-  flex-direction: column; /* Stack content vertically */
-  justify-content: flex-end; /* Align content to the bottom */
-  height: 100%; /* Ensure the item takes the full height */
+  /* background-color: #ddd; */
+  padding: 20px;
+  text-align: center;
 }
 
-.work-description
+.project-name-link
 {
-  padding-top: 10px;
-}
-
-.project-name-link {
   margin-bottom: 5px;
   font-size: 28px;
   line-height: 34px;
   font-weight: 400;
-  color: #fff; /* Text color */
+  color: #fff;
   text-decoration: none;
-}
-
-.project-description {
-  font-size: 16px;
-  font-weight: 200;
-  line-height: 28px;
-  opacity: 0.8; /* Makes the text slightly transparent */
-  margin-bottom: 60px; /* Adds space below each description */
-  width: 100%;
-}
-
-.xp-wrap {
-  margin-bottom: 25px; /* Adds space below the container */
-  width: 70%; /* Sets the width of the container to 70% of the parent container */
-  font-weight: 400; /* Normal font weight */
-}
-
-.xp-heading {
-  font-size: 36px; /* Font size of the heading */
-  line-height: 50px; /* Line height for the heading */
-  margin: 10px 0; /* Adds space above and below the heading */
-  position: static;
-}
-
-.xp-description {
-  font-size: 16px;
-  line-height: 28px;
-  margin: 0 0 10px;
-  position: static;
-  opacity: 0.8; /* Slightly transparent text */
-}
-
-/* Updated grid layout */
-.xp-grid-container {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); /* Responsive columns */
-  gap: 20px; /* Adds space between the items */
-}
-
-.wp-wrap {
-  text-align: center;
-  padding: 10px;
-  border-radius: 10px;
-}
-
-.wp-name-txt {
-  font-size: 20px; /* Font size for the names */
-  line-height: 34px; /* Line height for names */
-  margin-bottom: 10px; /* Adds space below each name */
-}
-
-.wp-description-txt {
-  font-size: 16px; /* Font size for the description */
-  line-height: 28px; /* Line height for the description */
-  margin-bottom: 5px; /* Adds space below the description */
-  opacity: 0.6; /* Makes the description slightly transparent */
-}
-
-.wp-dates-txt {
-  font-size: 12px; /* Font size for date text */
-  line-height: 20px; /* Line height for date text */
-  opacity: 0.7; /* Slight transparency */
-}
-
-.team-photo-container {
-  display: flex;
-  justify-content: center; /* Centers the team photo horizontally */
-}
-
-.team-photo {
-  width: 100%; /* Sets the width of the photo to 100% of its container */
-  height: auto; /* Maintains the aspect ratio of the photo */
-  border-radius: 15px; /* Rounds the corners of the image */
-}
-
-.degree-name
-{
-  font-size: 15pt;
-}
-
+  }
   
+  .project-description
+  {
+    font-size: 16px;
+    font-weight: 200;
+    line-height: 28px;
+    opacity: 0.8;
+    margin-bottom: 60px;
+    width: 100%;
+  }
+
+  .xp-wrap
+  {
+    margin-bottom: 50px;
+    width: 70%;
+    font-weight: 400;
+  }
+
+  .xp-heading
+  {
+    font-size:  36px;
+    line-height: 50px;
+    margin: 10px 0;
+    position: static;
+  }
+
+  .xp-description
+  {
+    font-size:  16px;
+    line-height: 28px;
+    margin: 0 0 10px;
+    position: static;
+    opacity: 0.8;
+  }
+
+  .xp-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: 1fr;
+    gap: 50px;
+  }
+  
+  .wp-grid-item {
+    background-color: #ddd;
+    padding: 10px;
+    text-align: center;
+    border: 1px solid #ccc;
+  }
+
+  .wp-name-txt
+  {
+    font-size: 20px;
+    line-height: 34px;
+    margin-bottom: 10px;
+  }
+  
+  .wp-description-txt
+  {
+    font-size: 16px;
+    line-height: 28px;
+    margin-bottom: 5px;
+    opacity: 0.6;
+  }
+  
+  .wp-dates-txt
+  {
+    font-size: 12px;
+    line-height: 20px;
+    opacity: 0.7;
+  }
   
 
 /*--------------------- Featured ---------------------*/
 
-.S2-project-images {
-  width: 100%;                 /* Ensures the image fills the width of its container */
-  max-width: 600px;             /* Maximum width for all images */
-  height: 300px;                /* Fixed height for all images */
-  object-fit: contain;          /* Scales down the image to fit within the container */
-  background-color: #000000;    /* Sets the background color to match the grid background */
-  border-radius: 15px;          /* Optional: Adds rounded corners */
+.S2-project-images
+{
+  width: 600px;
+  height: auto;
+  border-radius: 15px;
 }
 
 

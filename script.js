@@ -1,6 +1,6 @@
 // script.js
 document.addEventListener('DOMContentLoaded', function () {
-  const words = [" Games.", " Cultural Heritage Exhibits.", " Communication Tools."];
+  const words = [" 3D Artist.", " XR designer.", " Product designer.", " Hobbyist Web-Developer."];
   let wordIndex = 0;
   let letterIndex = 0;
   let currentWord = '';
