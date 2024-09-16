@@ -1,14 +1,17 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
-    <title>Projects</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BeatBox VR - Projects</title>
     <link rel="stylesheet" href="BeatBoxVR.css" />
 </head>
 
-<body class="body projects-page">
-    <div class="projects-main">
-        <div class="navigation w-nav">
+<body class="projects-page">
+    <!-- Main Navigation -->
+    <header class="projects-main">
+        <nav class="navigation">
             <a href="index.html">
                 <h1>Reality B</h1>
             </a>
@@ -17,21 +20,88 @@
                 <a href="about.html" class="navigation-item">About</a>
                 <a href="contact.html" class="navigation-item">Contact</a>
             </div>
-        </div>
-        <section class="BBVR-Section-1 section">
-            <div class="bbvr-logo-gif">
-                <img src="Assets/BBVR_logo.gif" alt="BeatBox VR Logo gif">
+        </nav>
+    </header>
+
+    <!-- Header Section -->
+    <section class="header-img-container">
+        <img class="header-img" src="Assets/BBVR_logo.gif" alt="BeatBox VR Logo">
+    </section>
+
+    <!-- Main Content -->
+    <main class="content-container">
+
+        <!-- Introduction Section -->
+        <section class="main-header">
+            <img src="Assets/placeholder-image.webp" alt="BeatBox VR Placeholder">
+            <h2 class="header-greeting">Hey There!</h2>
+            <h2 class="header-greeting">Wondering what BeatBox VR is?</h2>
+            <p class="description">Description of what BeatBox VR is and why</p>
+        </section>
+
+        <!-- Video Section -->
+        <section class="video-section">
+            <div class="img-container">
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/5DtlHFHzCmY"
+                    title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
             </div>
         </section>
-        <section class="BBVR-Section-2 section"></section>
-        <section class="BBVR-Section-3 section"></section>
-        <section class="BBVR-Section-4 section"></section>
-    </div>
+
+        <!-- Why BeatBox VR Section -->
+        <section class="section-4">
+            <img src="Assets/placeholder-image.webp" alt="BeatBox VR Placeholder">
+            <h2 class="header-greeting">Why BeatBox VR is so cool?</h2>
+            <p class="description">Explanation about why BeatBox VR is unique</p>
+
+            <div class="section-4-grid-container">
+                <div class="grid-item">
+                    <h3>Cost</h3>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                </div>
+                <div class="grid-item">
+                    <h3>Quality</h3>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                </div>
+                <div class="grid-item">
+                    <h3>Experience</h3>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                </div>
+                <div class="grid-item">
+                    <h3>Support</h3>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Form Section -->
+        <section class="contact-form">
+            <div class="wrapper">
+                <h2>Contact Us</h2>
+                <form action="contact.php" method="post">
+                    <div class="form-group">
+                        <label for="name">Name</label>
+                        <input type="text" id="name" name="name" placeholder="Your Name" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email</label>
+                        <input type="email" id="email" name="email" placeholder="Your Email" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="message">Message</label>
+                        <textarea id="message" name="message" placeholder="Your Message" required></textarea>
+                    </div>
+                    <button type="submit" class="submit-btn">Send Message</button>
+                </form>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footnote-txt-wrap">
+            <p class="footnote-txt">Designed & Built by Jake Boulton</p>
+        </div>
+    </footer>
 </body>
 
-<footer>
-    <div class="footnote-txt-wrap"></div>
-        <p class="footnote-txt">Designed & Built by Jake Boulton</p>
-    </div>
-</footer>
 </html>
