@@ -1,120 +1,111 @@
 /* ---------- Fonts ---------- */
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100..900&family=Roboto:wght@100;300;400;500;700;900&display=swap');
 
-h1, h2, h3, h4, h5, h6 {
-  font-weight: bold;
-  margin-bottom: 10px;
-}
-
-h1 {
-  font-size: 38px;
-  font-weight: 400;
+body, h1, h2, h3, h4, p {
+  font-family: 'Montserrat', sans-serif;
   color: #fff;
-  margin-top: 20px;
-}
-
-h2 {
-  font-size: 32px;
-  color: #fff;
-  margin-top: 20px;
-}
-
-h3 {
-  font-size: 24px;
-  color: #fff;
-}
-
-p {
-  margin-bottom: 10px;
-  color: #fff;
-}
-
-/* ---------- Body & Navigation ---------- */
-.body, .nav {
-  font-family: "Montserrat", sans-serif;
-  color: #fff;
-  font-size: 16px;
-  background-color: #212427;
   margin: 0;
   padding: 0;
+  line-height: 1.6;
 }
 
-.nav-bar {
-  position: absolute;
-  right: 0;
-  padding-right: 5%;
+body {
+  background-color: #1a1a1a;
 }
 
+/* ---------- Navigation ---------- */
 .navigation {
   display: flex;
-  padding: 15px 50px;
-  align-items: center;
+  justify-content: space-between;
+  padding: 20px 50px;
   background-color: #111314;
 }
 
+.nav-bar {
+  display: flex;
+}
+
 .navigation-item {
-  padding: 9px 20px;
+  padding: 10px 20px;
   font-size: 14px;
-  letter-spacing: 1px;
   text-transform: uppercase;
-  text-align: center;
-  color: inherit;
+  color: #fff;
   text-decoration: none;
-}
-
-/* ---------- Projects Grid ---------- */
-
-.section-1
-{
-  display: flex;
-  align-items: center;
-  justify-content: left;
-  margin-top: 96px;
-  margin-bottom: 48px;
-  margin-left: 40px;
-}
-
-.typewriter-container {
-  display: inline-block;
-  overflow: hidden;
-  vertical-align: bottom; /* Align with surrounding text */
-  white-space: nowrap;    /* Prevent text wrapping */
-}
-
-.learn-more-container
-{
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  background-color: #314ec2;
-  width: 125px;
-  height: 40px;
-  border-radius: 20px;
-}
-
-.page-link-button
-{
-  padding: 9px 20px;
-  font-size: 14px;
   letter-spacing: 1px;
-  color: aliceblue;
-  text-decoration: none;
+  transition: color 0.3s ease;
 }
 
+.navigation-item:hover {
+  color: #314ec2;
+}
 
-/* ---------- Projects Grid ---------- */
+/* ---------- Hero Section ---------- */
+.section-1 {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 100px 50px;
+  background-color: #1e1e1e;
+}
+
+.introduction-wrap {
+  max-width: 600px;
+}
+
+.introduction-message-text {
+  font-size: 38px;
+  font-weight: 600;
+  color: #fff;
+}
+
+.introduction-role-text {
+  font-size: 16px;
+  color: #aaa;
+  margin-bottom: 20px;
+}
+
+.learn-more-container {
+  margin-top: 30px;
+}
+
+.page-link-button {
+  display: inline-block;
+  padding: 10px 20px;
+  font-size: 14px;
+  background-color: #314ec2;
+  color: #fff;
+  text-transform: uppercase;
+  text-decoration: none;
+  border-radius: 30px;
+  transition: background-color 0.3s ease;
+}
+
+.page-link-button:hover {
+  background-color: #1a73e8;
+}
+
+/* ---------- Projects Section ---------- */
+.projects-section {
+  padding: 60px 20px;
+}
+
 .projects-grid-container {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 20px;
-  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 60px; /* Spacing between the project rows */
+  margin: 0 auto;
+  max-width: 1240px;
 }
 
 .project-card {
-  background-color: rgb(0, 0, 0);
-  border-radius: 10px;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); /* Two equal columns for image and text */
+  background-color: #1e1e1e;
+  border-radius: 20px;
   overflow: hidden;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  padding: 40px;
+  align-items: center;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
   transition: transform 0.3s ease;
 }
 
@@ -122,114 +113,154 @@ p {
   transform: translateY(-5px);
 }
 
-.project-image {
-  width: 100%;
-  height: 450px;
-  object-fit: contain;
+.project-content {
+  padding: 20px;
 }
 
-.project-content {
-  padding: 15px;
-  background-color: aliceblue;
+.project-image {
+  width: 100%;
+  max-width: 590px;
+  max-height: 350px;
+  border-radius: 20px;
+  object-fit: scale-down;
+  background-color: black;
 }
 
 .project-content h3 {
-  margin: 10px 0 5px;
-  font-size: 20px;
-  color: #314ec2;
+  margin-bottom: 15px;
+  font-size: 28px;
+  font-weight: 600;
+  color: #fff;
 }
 
-.project-content p {
-  margin: 5px 0;
+.project-content .subtitle {
+  font-size: 16px;
+  color: #aaa;
+  margin-bottom: 20px;
+}
+
+.project-content blockquote {
+  font-size: 18px;
+  color: #ddd;
+  margin-bottom: 20px;
+}
+
+.project-content .author {
   font-size: 14px;
-  color: #666;
+  color: #888;
 }
 
-.project-content p:last-child {
-  color: #000;
-  font-weight: bold;
+.project-content .view-case-study {
+  font-size: 16px;
+  color: #314ec2;
+  text-decoration: none;
+  margin-bottom: 20px;
+  display: inline-block;
+  transition: color 0.3s ease;
+}
+
+.project-content .view-case-study:hover {
+  color: #1a73e8;
+}
+
+/* Alternate positioning of image and text */
+.project-card:nth-child(even) {
+  grid-template-columns: 1fr 1fr; /* Even projects reverse the order */
+  direction: rtl; /* Reverse the layout on even projects */
+}
+
+.project-card:nth-child(even) .project-content {
+  direction: ltr; /* Ensure text direction remains correct */
 }
 
 /* ---------- Team Section ---------- */
-.team-section
-{
-  padding-top: 96px;
-  background-color: aliceblue;
-}
-
-.team-photo
-{
-  width: 100%;
-  height: auto;
-}
-
-.team-wrap {
-  margin-bottom: 25px;
-  width: 70%;
-  margin-left: 20px;
+.team-section {
+  padding: 60px 20px;
+  background-color: #2a2a2a;
 }
 
 .team-heading {
   font-size: 36px;
-  margin: 10px 0;
-  color: #212427;
+  color: #fff;
+  margin-bottom: 20px;
 }
 
 .team-description {
   font-size: 16px;
-  opacity: 0.8;
-  color: #212427;
+  color: #ccc;
+  margin-bottom: 40px;
 }
 
 .team-grid-container {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
   gap: 20px;
-  align-items: start;
 }
 
 .member-wrap {
   text-align: center;
-  padding: 10px;
+  padding: 20px;
   border-radius: 10px;
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
+  background-color: #1e1e1e;
 }
 
 .member-name-txt {
   font-size: 20px;
   font-weight: 500;
+  color: #fff;
   margin-bottom: 5px;
-  color: #212427;
 }
 
 .member-description-txt {
-  opacity: 0.6;
-  color: #212427;
+  font-size: 16px;
+  color: #ccc;
+  margin-bottom: 10px;
 }
 
 .degree-name, .uni-name {
   font-size: 14px;
-  opacity: 0.6;
-  color: #212427;
+  color: #888;
 }
 
 .uni-name {
   font-size: 12px;
+  color: #aaa;
 }
 
 /* ---------- Footer ---------- */
-
-.footer
-{
-  background-color: aliceblue;
+.footer {
+  background-color: #111314;
+  padding: 20px 0;
+  text-align: center;
 }
 
 .footnote-txt {
-  display: flex;
-  align-items: center;
-  justify-content: center;
   font-size: 10px;
+  color: #888;
   font-weight: 100;
+}
+
+/* ---------- Utility Classes ---------- */
+.text-center {
+  text-align: center;
+}
+
+.text-right {
+  text-align: right;
+}
+
+.text-left {
+  text-align: left;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.flex {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
