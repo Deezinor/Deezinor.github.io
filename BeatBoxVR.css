@@ -1,0 +1,65 @@
+/* ---------- Fonts ---------- */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100..900&family=Roboto:wght@100;300;400;500;700;900&display=swap');
+
+body, h1, h2, h3, h4, p {
+    font-family: 'Montserrat', sans-serif;
+    color: #fff;
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+  }
+
+body {
+  background-color: #1a1a1a;
+}
+
+/* Default state: No underline */
+a {
+    text-decoration: none;
+    color: inherit; /* Make sure the text color is inherited or defined */
+    transition: color 0.3s ease, text-decoration 0.3s ease;
+}
+
+/* Hover state: Show underline */
+a:hover, a:focus {
+    text-decoration: underline;
+    color: inherit; /* Maintain the color when hovered */
+}
+
+/* Active state (when pressed): Show underline */
+a:active {
+    text-decoration: underline;
+    color: inherit; /* Keep the color consistent */
+}
+
+/* Visited state: No underline (optional) */
+a:visited {
+    text-decoration: none;
+    color: inherit; /* Keep the same color for visited links */
+}
+
+/* ---------- Navigation ---------- */
+.navigation {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px 50px;
+    background-color: #111314;
+  }
+  
+  .nav-bar {
+    display: flex;
+  }
+  
+  .navigation-item {
+    padding: 10px 20px;
+    font-size: 14px;
+    text-transform: uppercase;
+    color: #fff;
+    text-decoration: none;
+    letter-spacing: 1px;
+    transition: color 0.3s ease;
+  }
+  
+  .navigation-item:hover {
+    color: #314ec2;
+  }
