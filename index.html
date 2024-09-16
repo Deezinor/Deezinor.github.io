@@ -1,152 +1,134 @@
 <!DOCTYPE html>
-    <html lang="en">
-        <head>
-            <meta charset="UTF-8">
-            <title>Portfolio Webiste</title>
-            <link rel="preconnect" href="https://fonts.googleapis.com">
-            <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-            <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
-            <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
-            <link rel="stylesheet" href="styles.css" />
-        </head>
-        <body class="body">
-            <div class="navigation w-nav">
-                <!--<a href="index.html" class="logo-link">
-                    <img src="" alt="Logo Image" class="logo-image">
-                </a>-->
-                <h1>Reality B</h1>
-                <div class="nav-bar">
-                    <a href="projects.html" class="navigation-item">Projects</a>
-                    <a href="about.html" class="navigation-item">About</a>
-                    <a href="contact.html" class="navigation-item">Contact</a>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Portfolio Website</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css" />
+</head>
+<body class="body">
+
+    <div class="navigation w-nav">
+        <a href="index.html">
+            <h1>Reality B</h1>
+        </a>
+        <div class="nav-bar">
+            <a href="projects.html" class="navigation-item">Projects</a>
+            <a href="about.html" class="navigation-item">About</a>
+            <a href="contact.html" class="navigation-item">Contact</a>
+        </div>
+    </div>
+
+    <section class="section-1 section">
+        <div class="introduction-container">
+            <div class="introduction-wrap">
+                <div class="introduction-role-text">Multi-Award Winning XR Design Studio.</div>
+                <div class="introduction-message">
                 </div>
             </div>
-            <section class="section-1 section">
-                <div class="introduction-container">
-                    <div class="introduction-wrap">
-                        <div class="introduction-name-text">
-                            Reality B
-                        </div>
-                        <div class="introduction-role-text">
-                            Multi-Award Winning XR Design Studio.
-                        </div>
-                        <div class="introduction-message">
-                            <h1 class="introduction-message-text">
-                                We create
-                                <div class="typewriter-container">
-                                    <span id="typewriter"></span>
-                                    <span id="cursor">|</span>
-                                </div>
-                                <script src="script.js"></script>
-                            </h1>
-                        </div>
-                        <!--<a href="about.html" class="introduction-about-link">
-                            Learn More>>
-                        </a>-->
+            <div class="introduction-wrap">
+                <h1 class="introduction-message-text">
+                    We create
+                    <div class="typewriter-container">
+                        <span id="typewriter"></span>
+                        <span id="cursor">|</span>
                     </div>
-                </div>
-            </section>
-            <!-- <div class="view-projects-container">
-                <a href="#section-2-container">
-                    <div class="view-projects-wrap">
-                        <div class="view-projects-txt">
-                        View Projects
-                        </div>
-                    </div>
-                </a>
-            </div> -->
-            <section class="section-2 section">
-                <div id ="section-2-container" class="section-2-container">
-                    <div class="section-2-grid">
-                        <a href="projects.html#BeatBox_VR">
-                            <div class="bbvr-grid-block grid-item">
-                                <img class="S2-project-images" src="/Assets/BBVR_logo.gif">
-                                <div class="work-description">
-                                    <div class="project-name-link">BeatBox VR</div>
-                                    <p class="project-description">Virtual Reality Rhythym Game & Drum Simulator</p>
-                                </div>
-                            </div>
-                        </a>
-                        <a href="projects.html#GoFish">
-                            <div class="gofish-grid-block grid-item">
-                                <img class="S2-project-images" src="/Assets/2024_GoFish_Logo.png">
-                                <div class="work-description">
-                                    <div class="project-name-link">GoFish</div>
-                                    <p class="project-description">Go Fish card game reimagined in Mixed Reality</p>
-                                </div>
-                            </div>
-                        </a>
-                        <a href="projects.html#Habibi" >
-                            <div class="habibi-grid-block grid-item habibi">
-                                <img class="S2-project-images" src="/Assets/Habibi Logo.png">
-                                <div class="work-description">
-                                    <div class="project-name-link">Habibi</div>
-                                    <p class="project-description">Long-distance mixed reality communication tool</p>
-                                </div>
-                            </div>
-                        </a>
-                        <a href="projects.html#Midnight-at-the-Pagoda">
-                            <div class="sxr-grid-block grid-item">
-                                <div class="sxr-img-background">
-                                    <img class="S2-project-images" src="/Assets/2024_SXR_Ai_GameTitle_v2.png">
-                                </div>
-                                <div class="work-description">
-                                    <div class="project-name-link">Midnight at the Pagoda</div>
-                                    <p class="project-description">Cultural Heritage Exhibition Designed for the musuem at the Great Bao'en Temple</p>
-                                </div>
-                            </div>
-                        </a>
-                    </div>
-                </div>
-                <div class="team-container">
-                    <div class="xp-wrap">
-                        <h2 class="xp-heading">Meet the Team</h2>
-                        <p class="xp-description">We are a team of multi-nationals who met at University while studying for a Masters
-                            in Virtual and Augmented Reality.
-                        </p>
-                    </div>
-                    <div class="team-photo-container">
-                        <img class="team-photo" src="/Assets/TeamPhotoInnovate.JPG">
-                    </div>
-                    <div class="xp-grid">
-                        <div class="xp-grid-container">
-                            <div class="wp-wrap xp-grid-item">
-                              <div class="wp-name-txt">Joshua Davies</div>
-                              <p class="wp-description-txt degree-name">Interactive Media BSc</p>
-                              <p class="wp-description-txt">University of York, UK</p>
-                            </div>
-                            <div class="wp-wrap xp-grid-item">
-                              <div class="wp-name-txt">Nathan Thomas-Benke</div>
-                              <p class="wp-description-txt degree-name">Computer Science BS</p>
-                              <p class="wp-description-txt">University of Wisconsin-Madison, U.S.A</p>
-                            </div>
-                            <div class="wp-wrap xp-grid-item">
-                              <div class="wp-name-txt">Mai Ye</div>
-                              <p class="wp-description-txt degree-name">Environmental Science BSc</p>
-                              <p class="wp-description-txt">Honhai University, China</p>
-                            </div>
-                            <div class="wp-wrap xp-grid-item">
-                              <div class="wp-name-txt">Hwanjoon Jang</div>
-                              <p class="wp-description-txt degree-name">Law BCL</p>
-                              <p class="wp-description-txt">Yonsei University, South Korea</p>
-                              <p class="wp-description-txt degree-name">Spatial Economics & Data Analysis MA</p>
-                              <p class="wp-description-txt">University of Southern California, U.S.A</p>
-                            </div>
-                            <div class="wp-wrap xp-grid-item">
-                              <div class="wp-name-txt">Jake Boulton</div>
-                              <p class="wp-description-txt degree-name">Product Design Technology BSc</p>
-                              <p class="wp-description-txt">University of the West Of England, UK</p>
-                            </div>
-                          </div>                           
-                    </div>                         
-                </div>
-            </section>
-        </body>
-        <footer>
-            <div class="footnote-txt-wrap">
-                <p class="footnote-txt">
-                    Designed & Built by Jake Boulton
-                </p>
+                    <script src="script.js"></script>
+                </h1>
             </div>
-        </footer>
-    </html>
+            <div class="learn-more-container">
+                <a class="page-link-button" href="about.html">About Us</a>
+            </div>
+        </div>
+    </section>
+
+    <section class="projects-section">
+        <div class="projects-grid-container">
+            <div class="project-card">
+                <img src="/Assets/BBVR_logo.gif" alt="Project Image" class="project-image">
+                <div class="project-content">
+                    <h3>BeatBox VR</h3>
+                    <p>Kloten, CH</p>
+                    <p>UBS AG</p>
+                </div>
+            </div>
+            <div class="project-card">
+                <img src="/Assets/2024_GoFish_Logo.png" alt="Project Image" class="project-image">
+                <div class="project-content">
+                    <h3>Arrivée</h3>
+                    <p>Horn, CH</p>
+                    <p>Mettler Entwickler AG</p>
+                </div>
+            </div>
+            <div class="project-card">
+                <img src="/Assets/Habibi Logo.png" alt="Project Image" class="project-image">
+                <div class="project-content">
+                    <h3>Im alte Räbberg</h3>
+                    <p>Zurich, CH</p>
+                    <p>Neubau Portal AG</p>
+                </div>
+            </div>
+            <div class="project-card">
+                <img src="/Assets/2024_SXR_Ai_GameTitle_v2.png" alt="Project Image" class="project-image">
+                <div class="project-content">
+                    <h3>L’Orée</h3>
+                    <p>Crisser, CH</p>
+                    <p>Plazza AG</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="team-section">
+        <div class="team-container">
+            <div class="team-wrap">
+                <h2 class="team-heading">Meet the Team</h2>
+                <p class="team-description">We are a team of multi-nationals who met at University while studying for a Masters in Virtual and Augmented Reality.</p>
+            </div>
+            <div class="team-photo-container">
+                <img class="team-photo" src="/Assets/TeamPhotoInnovate.JPG">
+            </div>
+            <div class="team-grid">
+                <div class="team-grid-container">
+                    <div class="member-wrap team-grid-item">
+                        <div class="member-name-txt">Joshua Davies</div>
+                        <p class="member-description-txt degree-name">Interactive Media BSc</p>
+                        <p class="member-description-txt uni-name">University of York, UK</p>
+                    </div>
+                    <div class="member-wrap team-grid-item">
+                        <div class="member-name-txt">Nathan Thomas-Benke</div>
+                        <p class="member-description-txt degree-name">Computer Science BS</p>
+                        <p class="member-description-txt uni-name">University of Wisconsin-Madison, USA</p>
+                    </div>
+                    <div class="member-wrap team-grid-item">
+                        <div class="member-name-txt">Mai Ye</div>
+                        <p class="member-description-txt degree-name">Environmental Science BSc</p>
+                        <p class="member-description-txt uni-name">Honhai University, China</p>
+                    </div>
+                    <div class="member-wrap team-grid-item">
+                        <div class="member-name-txt">Hwanjoon Jang</div>
+                        <p class="member-description-txt degree-name">Law BCL</p>
+                        <p class="member-description-txt uni-name">Yonsei University, South Korea</p>
+                        <p class="member-description-txt degree-name">Spatial Economics & Data Analysis MA</p>
+                        <p class="member-description-txt uni-name">University of Southern California, USA</p>
+                    </div>
+                    <div class="member-wrap team-grid-item">
+                        <div class="member-name-txt">Jake Boulton</div>
+                        <p class="member-description-txt degree-name">Product Design Technology BSc(Hons)</p>
+                        <p class="member-description-txt uni-name">University of the West Of England, UK</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+</body>
+<footer>
+    <div class="footnote-txt-wrap">
+        <p class="footnote-txt">Designed & Built by Jake Boulton</p>
+    </div>
+</footer>
+</html>

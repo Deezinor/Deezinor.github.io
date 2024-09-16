@@ -1,99 +1,45 @@
-/*--------------------- Fonts ---------------------*/
+/* ---------- Fonts ---------- */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100..900&family=Roboto:wght@100;300;400;500;700;900&display=swap');
 
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
-
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 
-{
+h1, h2, h3, h4, h5, h6 {
   font-weight: bold;
   margin-bottom: 10px;
 }
 
-h1 
-{
+h1 {
   font-size: 38px;
   font-weight: 400;
-  line-height: 44px;
+  color: #fff;
   margin-top: 20px;
-  color: #ffffff;
 }
 
-h2 
-{
+h2 {
   font-size: 32px;
-  line-height: 36px;
+  color: #fff;
   margin-top: 20px;
-  color: #ffffff;
 }
 
-h3 
-{
+h3 {
   font-size: 24px;
-  line-height: 30px;
-  margin-top: 20px;
-  color: #ffffff;
+  color: #fff;
 }
 
-h4 
-{
-  font-size: 18px;
-  line-height: 24px;
-  margin-top: 10px;
-  color: #ffffff;
-}
-
-h5 
-{
-  font-size: 14px;
-  line-height: 20px;
-  margin-top: 10px;
-  color: #ffffff;
-}
-
-h6 
-{
-  font-size: 12px;
-  line-height: 18px;
-  margin-top: 10px;
-  color: #ffffff;
-}
-
-p 
-{
-  margin-top: 0;
+p {
   margin-bottom: 10px;
-  color: #ffffff;
+  color: #fff;
 }
 
-
-/*--------------------- Body ---------------------*/
-
-.body, .nav
-{
+/* ---------- Body & Navigation ---------- */
+.body, .nav {
   font-family: "Montserrat", sans-serif;
-  color: #ffffff;
+  color: #fff;
   font-size: 16px;
-  line-height: 28px;
-  font-weight: 400;
-  padding: 0;
-  margin: 0;
   background-color: #212427;
+  margin: 0;
+  padding: 0;
 }
 
-
-/*--------------------- Navigation Bar ---------------------*/
-
-.nav {
-  position: relative;
-  z-index: 1000;
-}
-
-.nav-bar
-{
+.nav-bar {
   position: absolute;
   right: 0;
   padding-right: 5%;
@@ -106,30 +52,9 @@ p
   background-color: #111314;
 }
 
-.navigation-wrap {
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items: center;
-  padding: 10px 0;
-}
-
-.navigation-items 
-{
-  display: flex;
-  flex-direction: row; /* Ensures horizontal layout */
-  justify-content: center;
-  align-items: center;
-  gap: 31px;
-  margin: 0 20%;
-}
-
 .navigation-item {
   padding: 9px 20px;
-  opacity: 0.8;
   font-size: 14px;
-  line-height: 20px;
-  font-weight: 400;
   letter-spacing: 1px;
   text-transform: uppercase;
   text-align: center;
@@ -137,382 +62,174 @@ p
   text-decoration: none;
 }
 
-.nav-link {
-  text-decoration: none;
-  color: #222222;
-}
+/* ---------- Projects Grid ---------- */
 
-.logo-link {
+.section-1
+{
   display: flex;
   align-items: center;
-  background-color: #fff;
-  width: 150px;
-  height: 75px;
-  border-radius: 5px;
-}
-
-.logo-image {
-  display: block;
-}
-
-.logo-text
-{
-  font-weight: 300;
-}
-
-.logo-strong
-{
-  font-weight: 600;
-}
-
-a {
-  transition: opacity 200ms ease;
-  color: rgb(26, 27, 31);
-  text-decoration: underline;
-  background-color: transparent;
-}
-
-* {
-  box-sizing: border-box;
-}
-
-section
-{
-  margin: 0 40px;
-}
-
-
-/*--------------------- Section 1 ---------------------*/
-
-.introduction-container
-{
-  margin: 0 auto;
-  width: 100%;
-  height: auto;
-  max-width: 1140px;
-  position: static;
-}
-
-.introduction-wrap
-{
-  margin: 100px 0 140px;
-  padding: 0;
-  position: static;
-}
-
-.introduction-name-text
-{
-  font-weight: 400;
-  font-size: 20px;
-  line-height: 34px;
-}
-
-.introduction-role-text
-{
-  font-weight: 300;
-  font-size: 16px;
-  line-height: 28px;
-}
-
-.introduction-message-text
-{
-  display: flex;
-  flex-direction: row;
-  position: static;
-  font-weight: 300;
-  font-size: 60px;
-  line-height: 80px;
-  margin: 10px 0;
-  margin-left: -5px;
-}
-
-.view-projects-container
-{
-  margin: 80px 0;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.view-projects-wrap
-{
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  background-color: #314ec2;
-  width: 150px;
-  height: 62px;
-  border-radius: 30px;
-}
-
-.view-projects-txt
-{
-  color: #ffffff;
-  text-decoration: none;
-  font-weight: 600;
-  line-height: 20px;
-}
-
-.view-projects-txt::after, .view-projects-txt::selection
-{
-  text-decoration: none;
-  color: inherit;
-  font-weight: 600;
-  line-height: 20px;
-}
-
-.introduction-about-link
-{
-  text-decoration: none;
-  color: inherit;
-
+  justify-content: left;
+  margin-top: 96px;
+  margin-bottom: 48px;
+  margin-left: 40px;
 }
 
 .typewriter-container {
+  display: inline-block;
+  overflow: hidden;
+  vertical-align: bottom; /* Align with surrounding text */
+  white-space: nowrap;    /* Prevent text wrapping */
+}
+
+.learn-more-container
+{
   display: flex;
   align-items: center;
-  text-decoration: underline;
-  text-decoration-thickness: 4px;
-  color: #314ec2;
-  font-weight: 600;
-  padding-left: 30px;
+  justify-content: center;
+  background-color: #314ec2;
+  width: 125px;
+  height: 40px;
+  border-radius: 20px;
 }
 
-#cursor {
-  animation: blink 0.7s infinite;
-}
-
-@keyframes blink {
-  0% { opacity: 1; }
-  50% { opacity: 0; }
-  100% { opacity: 1; }
-}
-
-
-/*--------------------- Section 2 ---------------------*/
-
-.section-2-grid {
-  position: static;
-  display: grid;
-  grid-template-columns: repeat(2, 1fr); /* Creates two equal columns */
-  grid-template-rows: repeat(2, 1fr); /* Creates two equal rows */
-  gap: 25px; /* Adds spacing between grid items */
-  margin: 20px; /* Adds space around the grid container */
-}
-
-.grid-item {
-  display: flex;
-  flex-direction: column; /* Stack content vertically */
-  justify-content: flex-end; /* Align content to the bottom */
-  height: 100%; /* Ensure the item takes the full height */
-}
-
-.work-description
+.page-link-button
 {
-  padding-top: 10px;
-}
-
-.project-name-link {
-  margin-bottom: 5px;
-  font-size: 28px;
-  line-height: 34px;
-  font-weight: 400;
-  color: #fff; /* Text color */
+  padding: 9px 20px;
+  font-size: 14px;
+  letter-spacing: 1px;
+  color: aliceblue;
   text-decoration: none;
 }
 
-.project-description {
-  font-size: 16px;
-  font-weight: 200;
-  line-height: 28px;
-  opacity: 0.8; /* Makes the text slightly transparent */
-  margin-bottom: 60px; /* Adds space below each description */
-  width: 100%;
-}
 
-.xp-wrap {
-  margin-bottom: 25px; /* Adds space below the container */
-  width: 70%; /* Sets the width of the container to 70% of the parent container */
-  font-weight: 400; /* Normal font weight */
-}
-
-.xp-heading {
-  font-size: 36px; /* Font size of the heading */
-  line-height: 50px; /* Line height for the heading */
-  margin: 10px 0; /* Adds space above and below the heading */
-  position: static;
-}
-
-.xp-description {
-  font-size: 16px;
-  line-height: 28px;
-  margin: 0 0 10px;
-  position: static;
-  opacity: 0.8; /* Slightly transparent text */
-}
-
-/* Updated grid layout */
-.xp-grid-container {
+/* ---------- Projects Grid ---------- */
+.projects-grid-container {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); /* Responsive columns */
-  gap: 20px; /* Adds space between the items */
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+  padding: 20px;
 }
 
-.wp-wrap {
+.project-card {
+  background-color: rgb(0, 0, 0);
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+}
+
+.project-card:hover {
+  transform: translateY(-5px);
+}
+
+.project-image {
+  width: 100%;
+  height: 450px;
+  object-fit: contain;
+}
+
+.project-content {
+  padding: 15px;
+  background-color: aliceblue;
+}
+
+.project-content h3 {
+  margin: 10px 0 5px;
+  font-size: 20px;
+  color: #314ec2;
+}
+
+.project-content p {
+  margin: 5px 0;
+  font-size: 14px;
+  color: #666;
+}
+
+.project-content p:last-child {
+  color: #000;
+  font-weight: bold;
+}
+
+/* ---------- Team Section ---------- */
+.team-section
+{
+  padding-top: 96px;
+  background-color: aliceblue;
+}
+
+.team-photo
+{
+  width: 100%;
+  height: auto;
+}
+
+.team-wrap {
+  margin-bottom: 25px;
+  width: 70%;
+  margin-left: 20px;
+}
+
+.team-heading {
+  font-size: 36px;
+  margin: 10px 0;
+  color: #212427;
+}
+
+.team-description {
+  font-size: 16px;
+  opacity: 0.8;
+  color: #212427;
+}
+
+.team-grid-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 20px;
+  align-items: start;
+}
+
+.member-wrap {
   text-align: center;
   padding: 10px;
   border-radius: 10px;
-}
-
-.wp-name-txt {
-  font-size: 20px; /* Font size for the names */
-  line-height: 34px; /* Line height for names */
-  margin-bottom: 10px; /* Adds space below each name */
-}
-
-.wp-description-txt {
-  font-size: 16px; /* Font size for the description */
-  line-height: 28px; /* Line height for the description */
-  margin-bottom: 5px; /* Adds space below the description */
-  opacity: 0.6; /* Makes the description slightly transparent */
-}
-
-.wp-dates-txt {
-  font-size: 12px; /* Font size for date text */
-  line-height: 20px; /* Line height for date text */
-  opacity: 0.7; /* Slight transparency */
-}
-
-.team-photo-container {
   display: flex;
-  justify-content: center; /* Centers the team photo horizontally */
+  flex-direction: column;
+  justify-content: flex-start;
 }
 
-.team-photo {
-  width: 100%; /* Sets the width of the photo to 100% of its container */
-  height: auto; /* Maintains the aspect ratio of the photo */
-  border-radius: 15px; /* Rounds the corners of the image */
+.member-name-txt {
+  font-size: 20px;
+  font-weight: 500;
+  margin-bottom: 5px;
+  color: #212427;
 }
 
-.degree-name
+.member-description-txt {
+  opacity: 0.6;
+  color: #212427;
+}
+
+.degree-name, .uni-name {
+  font-size: 14px;
+  opacity: 0.6;
+  color: #212427;
+}
+
+.uni-name {
+  font-size: 12px;
+}
+
+/* ---------- Footer ---------- */
+
+.footer
 {
-  font-size: 15pt;
+  background-color: aliceblue;
 }
 
-  
-  
-
-/*--------------------- Featured ---------------------*/
-
-.S2-project-images {
-  width: 100%;                 /* Ensures the image fills the width of its container */
-  max-width: 600px;             /* Maximum width for all images */
-  height: 300px;                /* Fixed height for all images */
-  object-fit: contain;          /* Scales down the image to fit within the container */
-  background-color: #000000;    /* Sets the background color to match the grid background */
-  border-radius: 15px;          /* Optional: Adds rounded corners */
-}
-
-
-/*--------------------- Other Work ---------------------*/
-
-
-/*--------------------- Footnote ---------------------*/
-
-.footnote-txt
-{
+.footnote-txt {
   display: flex;
   align-items: center;
   justify-content: center;
   font-size: 10px;
   font-weight: 100;
-}
-
-/* About */
-
-.about-section
-{
-  display: flex;
-  flex-direction: row;
-  gap: 100px;
-  padding-left: 200px;
-  padding-right: 200px;
-  padding-top:100px;
-}
-
-.about-container-1
-{
-  display: flex;
-  flex-direction: column;
-  align-content: start;
-  gap: 20px;
-}
-
-.container-1a
-{
-  display: flex;
-  align-items: baseline;
-  gap: 25px;
-}
-
-.container-1b
-{
-  display: inline-flex;
-  align-items: baseline;
-  gap: 25px;
-}
-
-.material-symbols-outlined {
-  font-variation-settings:
-  'FILL' 0,
-  'wght' 400,
-  'GRAD' 0,
-  'opsz' 48
-}
-
-.linkedIn_logo {
-  width: 24px;
-  height: auto;
-}
-
-.my-photo
-{
-  width: 200px;
-  object-fit: contain;
-  border-radius: 50px;
-}
-
-.Instagram_logo
-{
-  width: 24px;
-  height: auto;
-}
-
-.about-container-2
-{
-  display: flex;
-  flex-direction: column;
-}
-
-.container-2a
-{
-  font-size: 36px;
-  font-weight: 400;
-}
-
-.container-2a-strong
-{
-  font-weight: 300;
-}
-  
-.container-2b
-{
-  font-size: 20px;
-  font-weight: 300; 
-}
-    
-.container-2c
-{
-  font-size: 16px;
-  font-weight: 200; 
 }
