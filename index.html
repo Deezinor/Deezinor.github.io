@@ -1,50 +1,51 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Portfolio Website</title>
+
+    <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100..900&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="styles.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100..900&family=Roboto:wght@100;300;400;500;700;900&display=swap" rel="stylesheet">
+
+    <!-- Stylesheet -->
+    <link rel="stylesheet" href="global_style_sheet.css" />
 </head>
-<body class="body">
 
-    <div class="navigation w-nav">
-        <a href="index.html">
-            <h1>Reality-B</h1>
-        </a>
-        <div class="nav-bar">
-            <a href="projects.html" class="navigation-item">Projects</a>
-            <a href="about.html" class="navigation-item">About</a>
-            <a href="contact.html" class="navigation-item">Contact</a>
-        </div>
-    </div>
+<body>
 
-    <section class="section-1 section">
+<!-- Navigation -->
+<header class="navigation">
+    <a href="index.html" class="logo-link">
+        <h1>Reality-B</h1>
+    </a>
+    <nav class="nav-bar">
+        <a href="projects.html" class="navigation-item">Projects</a>
+        <a href="about.html" class="navigation-item">About</a>
+        <a href="contact.html" class="navigation-item">Contact</a>
+    </nav>
+</header>
+
+
+
+    <!-- Hero Section with Fade -->
+    <section class="section-1">
         <div class="introduction-container">
             <div class="introduction-wrap">
                 <div class="introduction-role-text">Multi-Award Winning XR Design Studio.</div>
-                <div class="introduction-message">
-                </div>
-            </div>
-            <div class="introduction-wrap">
-                <h1 class="introduction-message-text">
-                    We create
-                    <div class="typewriter-container">
-                        <span id="typewriter"></span>
-                        <span id="cursor">|</span>
-                    </div>
-                    <script src="script.js"></script>
-                </h1>
+                <h1 class="introduction-message-text-left">We create</h1>
+                <h1><span id="fade-word" class="fade-text">Games.</span></h1>
             </div>
             <div class="learn-more-container">
                 <a class="page-link-button" href="about.html">About Us</a>
             </div>
         </div>
-    </section>
+    </section>      
 
+    <!-- Projects Section -->
     <section class="projects-section">
         <div class="projects-grid-container">
 
@@ -57,21 +58,21 @@
                     <blockquote></blockquote>
                     <p class="author">Master's Program Virtual Reality Module - Submission</p>
                 </div>
-                <img src="/Assets/BBVR_logo.gif" alt="BeatBox VR Logo gif" class="project-image right">
+                <img src="/Assets/BBVR_logo.gif" alt="BeatBox VR Logo gif" class="project-image">
             </div>
-    
+
             <!-- Project 2 -->
             <div class="project-card">
                 <div class="project-content">
                     <p class="view-case-study"><a href="GoFish.html">View case study →</a></p>
                     <h3>GoFish!</h3>
                     <p class="subtitle">Mixed Reality Card Game</p>
-                    <blockquote>A mixed-reality take of the classic card game Go Fish.</blockquote>
+                    <blockquote>A mixed-reality take on the classic card game Go Fish.</blockquote>
                     <p class="author">XR Hack London - Submission</p>
                 </div>
-                <img src="/Assets/2024_GoFish_Logo.png" alt="Go Fish Logo Image" class="project-image left">
+                <img src="/Assets/2024_GoFish_Logo.png" alt="Go Fish Logo Image" class="project-image">
             </div>
-    
+
             <!-- Project 3 -->
             <div class="project-card">
                 <div class="project-content">
@@ -81,9 +82,9 @@
                     <blockquote></blockquote>
                     <p class="author">Great Bao'en Temple Museum</p>
                 </div>
-                <img src="/Assets/2024_SXR_Ai_GameTitle_v2.png" alt="Gucci AR Fashion Show" class="project-image right">
+                <img src="/Assets/2024_SXR_Ai_GameTitle_v2.png" alt="Gucci AR Fashion Show" class="project-image">
             </div>
-    
+
             <!-- Project 4 -->
             <div class="project-card">
                 <div class="project-content">
@@ -93,11 +94,13 @@
                     <blockquote></blockquote>
                     <p class="author">XR Hack Istanbul - Submission</p>
                 </div>
-                <img src="/Assets/Habibi Logo.png" alt="Chanel AR Experience" class="project-image left">
+                <img src="/Assets/Habibi Logo.png" alt="Chanel AR Experience" class="project-image">
             </div>
+
         </div>
     </section>
 
+    <!-- Team Section -->
     <section class="team-section">
         <div class="team-container">
             <div class="team-wrap">
@@ -105,46 +108,47 @@
                 <p class="team-description">We are a team of multi-nationals who met at University while studying for a Masters in Virtual and Augmented Reality.</p>
             </div>
             <div class="team-photo-container">
-                <img class="team-photo" src="/Assets/TeamPhotoInnovate.JPG">
+                <img class="team-photo" src="/Assets/TeamPhotoInnovate.JPG" alt="Team Photo">
             </div>
-            <div class="team-grid">
-                <div class="team-grid-container">
-                    <div class="member-wrap team-grid-item">
-                        <div class="member-name-txt">Joshua Davies</div>
-                        <p class="member-description-txt degree-name">Interactive Media BSc</p>
-                        <p class="member-description-txt uni-name">University of York, UK</p>
-                    </div>
-                    <div class="member-wrap team-grid-item">
-                        <div class="member-name-txt">Nathan Thomas-Benke</div>
-                        <p class="member-description-txt degree-name">Computer Science BS</p>
-                        <p class="member-description-txt uni-name">University of Wisconsin-Madison, USA</p>
-                    </div>
-                    <div class="member-wrap team-grid-item">
-                        <div class="member-name-txt">Mai Ye</div>
-                        <p class="member-description-txt degree-name">Environmental Science BSc</p>
-                        <p class="member-description-txt uni-name">Honhai University, China</p>
-                    </div>
-                    <div class="member-wrap team-grid-item">
-                        <div class="member-name-txt">Hwanjoon Jang</div>
-                        <p class="member-description-txt degree-name">Law BCL</p>
-                        <p class="member-description-txt uni-name">Yonsei University, South Korea</p>
-                        <p class="member-description-txt degree-name">Spatial Economics & Data Analysis MA</p>
-                        <p class="member-description-txt uni-name">University of Southern California, USA</p>
-                    </div>
-                    <div class="member-wrap team-grid-item">
-                        <div class="member-name-txt">Jake Boulton</div>
-                        <p class="member-description-txt degree-name">Product Design Technology BSc(Hons)</p>
-                        <p class="member-description-txt uni-name">University of the West Of England, UK</p>
-                    </div>
+            <div class="team-grid-container">
+                <div class="member-wrap">
+                    <div class="member-name-txt">Joshua Davies</div>
+                    <p class="degree-name">Interactive Media BSc</p>
+                    <p class="uni-name">University of York, England</p>
+                </div>
+                <div class="member-wrap">
+                    <div class="member-name-txt">Nathan Thomas-Benke</div>
+                    <p class="degree-name">Computer Science BS</p>
+                    <p class="uni-name">University of Wisconsin-Madison, USA</p>
+                </div>
+                <div class="member-wrap">
+                    <div class="member-name-txt">Mai Ye</div>
+                    <p class="degree-name">Environmental Science BSc</p>
+                    <p class="uni-name">Honhai University, China</p>
+                </div>
+                <div class="member-wrap">
+                    <div class="member-name-txt">Hwanjoon Jang</div>
+                    <p class="degree-name">Law BCL</p>
+                    <p class="uni-name">Yonsei University, South Korea</p>
+                    <p class="degree-name">Spatial Economics & Data Analysis MA</p>
+                    <p class="uni-name">University of Southern California, USA</p>
+                </div>
+                <div class="member-wrap">
+                    <div class="member-name-txt">Jake Boulton</div>
+                    <p class="degree-name">Product Design Technology BSc(Hons)</p>
+                    <p class="uni-name">University of the West Of England, England</p>
                 </div>
             </div>
         </div>
     </section>
 
-</body>
-<footer>
-    <div class="footnote-txt-wrap">
+    <!-- Footer -->
+    <footer class="footer">
         <p class="footnote-txt">Designed & Built by Jake Boulton</p>
-    </div>
-</footer>
+    </footer>
+
+    <!-- Script for Typewriter Effect -->
+    <script src="script.js"></script>
+</body>
+
 </html>

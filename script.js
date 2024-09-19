@@ -1,36 +1,25 @@
-// script.js
 document.addEventListener('DOMContentLoaded', function () {
-  const words = [" Games.", " Cultural Heritage Exhibits.", " Communication Tools."];
-  let wordIndex = 0;
-  let letterIndex = 0;
-  let currentWord = '';
-  let isDeleting = false;
-  const typeSpeed = 200;
-  const deleteSpeed = 100;
-  const delayBetweenWords = 1000;
-  const typewriterElement = document.getElementById('typewriter');
+    const words = ["Games.", "Cultural Heritage Exhibits.", "Communication Tools."];
+    let wordIndex = 0;
+    const fadeTextElement = document.getElementById('fade-word');
 
-  function type() {
-      if (isDeleting) {
-          currentWord = words[wordIndex].substring(0, letterIndex - 1);
-          letterIndex--;
-      } else {
-          currentWord = words[wordIndex].substring(0, letterIndex + 1);
-          letterIndex++;
-      }
+    function changeWord() {
+        // Fade out the current word
+        fadeTextElement.classList.remove('fade-in');
 
-      typewriterElement.textContent = currentWord;
+        setTimeout(() => {
+            // Change the word after fade-out completes
+            wordIndex = (wordIndex + 1) % words.length;
+            fadeTextElement.textContent = words[wordIndex];
 
-      if (!isDeleting && letterIndex === words[wordIndex].length) {
-          setTimeout(() => isDeleting = true, delayBetweenWords);
-      } else if (isDeleting && letterIndex === 0) {
-          isDeleting = false;
-          wordIndex = (wordIndex + 1) % words.length;
-      }
+            // Fade in the new word
+            fadeTextElement.classList.add('fade-in');
+        }, 2000);  // Match this to the CSS transition duration (2 seconds in this case)
+    }
 
-      const speed = isDeleting ? deleteSpeed : typeSpeed;
-      setTimeout(type, speed);
-  }
+    // Initial fade-in
+    fadeTextElement.classList.add('fade-in');
 
-  type();
+    // Change word every 4 seconds (give time for fade-out and fade-in)
+    setInterval(changeWord, 4000);
 });

@@ -13,12 +13,12 @@ body {
     background-color: #eeeeee;
 }
 
-/* Navigation Styles */
+/* ---------- Navigation ---------- */
 .navigation {
     display: flex;
     justify-content: space-between;
     padding: 20px 50px;
-    background-color: #111314;
+    background-color: #111314; /* Background color for navigation bar */
 }
 
 .nav-bar {
@@ -29,23 +29,52 @@ body {
     padding: 10px 20px;
     font-size: 14px;
     text-transform: uppercase;
-    color: #eee;
-    text-decoration: none;
+    color: #fff; /* Text color */
     letter-spacing: 1px;
-    transition: color 0.3s ease;
+    text-decoration: none; /* Remove default underline */
+    transition: color 0.3s ease, text-decoration 0.3s ease;
 }
 
-.navigation-item:hover {
-    color: #314ec2;
+/* Remove underline for the "Reality-B" link */
+.navigation h1 a {
+    color: #fff; /* Ensure "Reality-B" text is white */
+    text-decoration: none; /* Remove underline */
 }
+
+/* Hover effect for the "Reality-B" and navigation items */
+.navigation h1 a:hover,
+.navigation-item:hover {
+    color: #314ec2; /* Change color on hover */
+    text-decoration: underline; /* Show underline on hover */
+    text-decoration-color: white; /* Set the underline color to white */
+}
+
+/* Ensure visited links don't get the default purple color */
+a:visited {
+    color: #fff; /* Make sure visited links remain white */
+    text-decoration: none; /* No underline on visited state */
+}
+
+/* Active and focus styles (when a link is clicked or focused) */
+.navigation h1 a:focus,
+.navigation h1 a:active,
+.navigation-item:focus,
+.navigation-item:active {
+    color: #fff; /* Active/focused links remain white */
+    text-decoration: underline; /* Show underline */
+    text-decoration-color: white; /* Underline in white */
+}
+
+
 
 /* Header Image */
 .header-img-container {
     text-align: center;
+    background-color: black;
 }
 
 .header-img {
-    width: 100%;
+    width: 50%;
     height: auto;
 
 }
@@ -89,8 +118,8 @@ h2.header-greeting {
 }
 
 .video-section iframe {
-    width: auto;
-    height: 500px; /* Maintain the 16:9 aspect ratio (calculated from 1000px width) */
+    width: 800px; /* Set width to 800px */
+    height: 450px; /* Set height to 450px */
     border: none;
 }
 
