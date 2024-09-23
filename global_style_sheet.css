@@ -1,4 +1,6 @@
-/* ---------- Global Styles ---------- */
+/* ======================================================
+   Global Styles
+========================================================= */
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100..900&family=Roboto:wght@100;300;400;500;700;900&display=swap');
 
 /* Base Styling */
@@ -14,7 +16,9 @@ body {
     background-color: #1a1a1a;
 }
 
-/* ---------- Navigation ---------- */
+/* ======================================================
+   Navigation Styles
+========================================================= */
 .navigation {
     display: flex;
     justify-content: space-between;
@@ -36,7 +40,6 @@ body {
     transition: color 0.3s ease, text-decoration 0.3s ease;
 }
 
-/* Reality-B logo styles */
 .logo-link h1 {
     color: #fff;
     font-size: 24px;
@@ -51,7 +54,6 @@ body {
     text-decoration-color: white;
 }
 
-/* Hover and focus states for navigation links */
 .navigation h1 a:hover,
 .navigation-item:hover {
     color: #314ec2;
@@ -59,7 +61,6 @@ body {
     text-decoration-color: white;
 }
 
-/* Remove default purple visited state */
 a:visited {
     color: #fff;
     text-decoration: none;
@@ -71,11 +72,16 @@ a:active, a:focus {
     text-decoration-color: white;
 }
 
-/* ---------- Hero Section ---------- */
-.section-1 {
+/* ======================================================
+   Hero Section (Index and Projects Pages)
+========================================================= */
+.section-1, .projects-hero {
     width: 100%;
     background-color: #1e1e1e;
     padding: 50px 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .introduction-container {
@@ -86,10 +92,11 @@ a:active, a:focus {
     text-align: left;
 }
 
-.introduction-message-text-left {
+.introduction-message-text-left, .projects-hero-text h2 {
     font-size: 38px;
     font-weight: 600;
     margin-bottom: 0;
+    color: #fff;
 }
 
 .fade-text {
@@ -98,30 +105,21 @@ a:active, a:focus {
     transition: opacity 2s ease-in-out;
     font-size: 36px;
     font-weight: 700;
+    color: #fff;
 }
 
 .fade-in {
     opacity: 1;
 }
 
-/* ---------- Button Styles ---------- */
-.page-link-button {
-    display: inline-block;
-    padding: 10px 20px;
-    font-size: 14px;
-    background-color: #314ec2;
-    color: #fff;
-    text-transform: uppercase;
-    text-decoration: none;
-    border-radius: 30px;
-    transition: background-color 0.3s ease;
+.projects-hero-text p {
+    font-size: 16px;
+    color: #aaa;
 }
 
-.page-link-button:hover {
-    background-color: #1a73e8;
-}
-
-/* ---------- Projects Section ---------- */
+/* ======================================================
+   Projects Section (Grid Layout)
+========================================================= */
 .projects-section {
     padding: 60px 20px;
 }
@@ -177,6 +175,7 @@ a:active, a:focus {
     color: #aaa;
 }
 
+/* Responsive adjustments for smaller screens */
 @media (max-width: 768px) {
     .projects-grid-container {
         grid-template-columns: 1fr;
@@ -184,7 +183,106 @@ a:active, a:focus {
     }
 }
 
-/* ---------- Contact Form ---------- */
+/* ======================================================
+   Video Section (BeatBoxVR)
+========================================================= */
+.video-section {
+    display: flex;
+    justify-content: center;
+    margin: 40px auto;
+    width: 100%;
+}
+
+.video-section iframe {
+    width: 800px;
+    height: 450px;
+    border: none;
+}
+
+/* ======================================================
+   Image Section (BeatBoxVR)
+========================================================= */
+.header-img-container {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 30px;
+}
+
+.header-img {
+    max-width: 100%;
+    height: auto;
+}
+
+/* ======================================================
+   Section 4 (Features Section in BeatBoxVR)
+========================================================= */
+.section-4 {
+    padding: 40px;
+    background-color: #1e1e1e;
+}
+
+.section-4-grid-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px;
+}
+
+.grid-item {
+    text-align: center;
+    color: #fff;
+}
+
+.grid-item img {
+    width: 100px;
+    height: auto;
+    margin-bottom: 15px;
+}
+
+.grid-item h3 {
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+
+.grid-item p {
+    font-size: 16px;
+    color: #aaa;
+}
+
+@media (max-width: 768px) {
+    .section-4-grid-container {
+        grid-template-columns: 1fr;
+        text-align: center;
+    }
+}
+
+/* ======================================================
+   Awards Section (BeatBoxVR)
+========================================================= */
+.awards-section {
+    display: flex;
+    justify-content: center;
+    padding: 40px 0;
+}
+
+.award-container {
+    text-align: center;
+    color: #fff;
+}
+
+.award-container img {
+    width: 150px;
+    height: auto;
+    margin-bottom: 10px;
+}
+
+.award-description {
+    font-size: 16px;
+    color: #aaa;
+}
+
+/* ======================================================
+   Contact Form (BeatBoxVR)
+========================================================= */
 .contact-form {
     background-color: #1e1e1e;
     padding: 40px 20px;
@@ -262,7 +360,9 @@ a:active, a:focus {
     background-color: #1a73e8;
 }
 
-/* ---------- Footer ---------- */
+/* ======================================================
+   Footer Styles
+========================================================= */
 .footer {
     background-color: #111314;
     padding: 20px;
@@ -273,4 +373,23 @@ a:active, a:focus {
 .footnote-txt {
     font-size: 10px;
     color: #888;
+}
+
+/* ======================================================
+   Button Styles
+========================================================= */
+.page-link-button {
+    display: inline-block;
+    padding: 10px 20px;
+    font-size: 14px;
+    background-color: #314ec2;
+    color: #fff;
+    text-transform: uppercase;
+    text-decoration: none;
+    border-radius: 30px;
+    transition: background-color 0.3s ease;
+}
+
+.page-link-button:hover {
+    background-color: #1a73e8;
 }
