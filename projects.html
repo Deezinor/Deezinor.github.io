@@ -9,7 +9,7 @@
     <link rel="stylesheet" href="global_style_sheet.css">
 </head>
 
-<body>
+<body class="projects-page">
 
     <!-- ==============================
          Navigation
@@ -30,20 +30,20 @@
     ================================= -->
     <section class="projects-hero">
         <div class="projects-hero-text">
-            <h2>Projects</h2>
-            <p>Designing immersive experiences for any sector.</p>
+            <h2 class="projects-page-title">Projects</h2>
+            <p class="projects-page-description">Designing immersive experiences for any sector.</p>
         </div>
     </section>
 
     <!-- ==============================
          Projects Section
     ================================= -->
-    <section class="projects-section">
+    <section class="projects-page-section">
         <div class="projects-grid-container">
             <!-- Project 1 -->
             <div class="project-item">
                 <a href="BeatBoxVR.html" class="project-link">
-                    <img src="images/beatbox-vr.jpg" alt="BeatBox VR Project" class="project-image">
+                    <img src="Assets/BBVR_logo.gif" alt="BeatBox VR Project" class="project-image">
                     <div class="project-content">
                         <h4>BeatBox VR</h4>
                         <p>Virtual Drumming and Music Creation Experience</p>
@@ -53,8 +53,8 @@
 
             <!-- Project 2 -->
             <div class="project-item">
-                <a href="MidnightPagoda.html" class="project-link">
-                    <img src="images/midnight-pagoda.jpg" alt="Midnight at the Pagoda Project" class="project-image">
+                <a href="#" class="project-link">
+                    <img src="Assets/2024_SXR_Ai_GameTitle_v2.png" alt="Midnight at the Pagoda Project" class="project-image">
                     <div class="project-content">
                         <h4>Midnight at the Pagoda</h4>
                         <p>A Virtual Heritage Experience</p>
@@ -65,9 +65,9 @@
            <!-- Project 3 -->
            <div class="project-item">
             <a href="#" class="project-link">
-                <img src="Assets/2024_SXR_Ai_GameTitle_v2.png" alt="Project Title 3" class="project-image">
+                <img src="Assets/2024_GoFish_Logo.png" alt="Project Title 3" class="project-image">
                 <div class="project-content">
-                    <h4>Project Title 3</h4>
+                    <h4>Go Fish!</h4>
                     <p>Short description of the project.</p>
                 </div>
             </a>
@@ -78,11 +78,35 @@
             <a href="#" class="project-link">
                 <img src="Assets/Habibi Logo.png" alt="Project Title 3" class="project-image">
                 <div class="project-content">
-                    <h4>Project Title 3</h4>
+                    <h4>Habibi</h4>
                     <p>Short description of the project.</p>
                 </div>
             </a>
         </div>
+        </div>
+    </section>
+
+    <!-- ==============================
+         Contact Form
+    ================================= -->
+    <section class="contact-form">
+        <div class="wrapper">
+            <h2>Contact Us</h2>
+            <form action="contact.php" method="post">
+                <div class="form-group">
+                    <label for="name">Name</label>
+                    <input type="text" id="name" name="name" placeholder="Your Name" required>
+                </div>
+                <div class="form-group">
+                    <label for="email">Email</label>
+                    <input type="email" id="email" name="email" placeholder="Your Email" required>
+                </div>
+                <div class="form-group">
+                    <label for="message">Message</label>
+                    <textarea id="message" name="message" placeholder="Your Message" required></textarea>
+                </div>
+                <button type="submit" class="submit-btn">Send Message</button>
+            </form>
         </div>
     </section>
 

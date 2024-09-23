@@ -1,5 +1,5 @@
 /* ======================================================
-   Global Styles
+   Global Styles (Common for All Pages)
 ========================================================= */
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100..900&family=Roboto:wght@100;300;400;500;700;900&display=swap');
 
@@ -14,6 +14,7 @@ body, h1, h2, h3, h4, p, a {
 
 body {
     background-color: #1a1a1a;
+    padding-top: 70px;
 }
 
 /* Link States */
@@ -37,17 +38,24 @@ a:visited {
 }
 
 /* ======================================================
-   Navigation Styles
+   Navigation Styles (Common for All Pages)
 ========================================================= */
 .navigation {
+    position: fixed; /* Make the navigation fixed at the top */
+    top: 0; /* Stick to the top of the viewport */
+    left: 0; /* Align to the left of the viewport */
+    width: 100%; /* Make the nav bar span the entire width */
+    z-index: 1000; /* Ensure it stays on top of other content */
+    background-color: #111314; /* Keep the same background color */
     display: flex;
     justify-content: space-between;
     padding: 20px 50px;
-    background-color: #111314;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Optional: Add a shadow for better visibility */
 }
 
 .nav-bar {
     display: flex;
+    padding-right: 6%;
 }
 
 .navigation-item {
@@ -71,15 +79,188 @@ a:visited {
     text-decoration-color: white;
 }
 
-a:focus, a:active {
-    color: #fff;
-    text-decoration: underline;
-    text-decoration-color: white;
+/* ======================================================
+   Index Page Projects Section Specific Styles
+========================================================= */
+.introduction-container {
+    padding-top: 80px;
+    padding-left: 40px;
+    margin: 0 20%;
+}
+
+.introduction-role-text {
+    font-size: 32px;
+    font-weight: 500;
+}
+
+.introduction-message-text {
+    font-size: 32px;
+    font-weight: 400;
+}
+
+.fade-text {
+    font-size: 46px;
+    font-weight: 400;
+    color: #1a73e8;
+}
+
+.fade-text {
+    opacity: 0; /* Start with the text hidden */
+    transform: translateY(20px); /* Slightly offset the text for a smoother animation */
+    transition: opacity 2s ease-in-out, transform 2s ease-in-out; /* Control the fade and slide effect */
+}
+
+.fade-in {
+    opacity: 1; /* Text becomes visible */
+    transform: translateY(0); /* Slide the text back into place */
+}
+
+.index-projects-section {
+    padding: 60px 20px;
+    background-color: #1a1a1a;
+}
+
+.index-projects-section .projects-grid-container {
+    display: flex;
+    flex-direction: column; /* Stack projects vertically */
+    gap: 60px;
+    max-width: 800px; /* Centered single-column layout */
+    margin: 0 auto;
+}
+
+.index-projects-section .project-card {
+    display: flex;
+    flex-direction: row-reverse; /* Image on the right, content on the left */
+    background-color: #1e1e1e;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    padding: 20px;
+}
+
+.index-projects-section .project-card:nth-child(even) {
+    flex-direction: row; /* Alternate the layout for even items */
+}
+
+.index-projects-section .project-image {
+    width: 40%; /* Make the image smaller */
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+.index-projects-section .project-content {
+    padding-left: 20px;
+    flex: 1;
+    text-align: left;
+}
+
+/* Hover Effect */
+.index-projects-section .project-card:hover {
+    transform: translateY(-5px);
+}
+
+/* Responsive adjustments for smaller screens */
+@media (max-width: 768px) {
+    .index-projects-section .project-card {
+        flex-direction: column; /* Stack image and content vertically */
+    }
+
+    .index-projects-section .project-image {
+        width: 100%; /* Image takes full width on small screens */
+        margin-bottom: 20px;
+    }
+}
+
+/* ---------- Team Section ---------- */
+.team-photo {
+    width: 100%;
+    padding: 10px;
+    border-radius: 10px;
 }
 
 /* ======================================================
-   BeatBoxVR Specific Styles
+   Projects Page Section Specific Styles
 ========================================================= */
+.projects-hero {
+    padding-top: 80px;
+    padding-left: 40px;
+    margin: 0 20%;
+}
+
+.projects-page-title {
+    font-size: 46px;
+    font-weight: 400;
+}
+
+.projects-page-description {
+    font-size: 24px;
+    font-weight: 00;
+}
+
+.projects-page-section {
+    padding: 60px 20px;
+    background-color: #1a1a1a;
+}
+
+.projects-page-section .projects-grid-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* Two-column grid layout */
+    gap: 30px;
+    max-width: 1240px;
+    margin: 0 auto;
+}
+
+.projects-page-section .project-item {
+    background-color: #1e1e1e;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease;
+    overflow: hidden;
+}
+
+.projects-page-section .project-item:hover {
+    transform: translateY(-10px);
+}
+
+.projects-page-section .project-image {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.projects-page-section .project-content {
+    padding: 20px;
+    text-align: center;
+}
+
+.projects-page-section .project-content h4 {
+    font-size: 18px;
+    font-weight: 600;
+    color: #fff;
+}
+
+.projects-page-section .project-content p {
+    font-size: 14px;
+    color: #aaa;
+}
+
+/* Responsive adjustments for smaller screens */
+@media (max-width: 768px) {
+    .projects-page-section .projects-grid-container {
+        grid-template-columns: 1fr; /* Single column on smaller screens */
+    }
+}
+
+/* ======================================================
+   BeatBoxVR Page Styles
+========================================================= */
+.BeatBox-page {
+    background-color: #eeeeee;
+}
+
+.beatboxvr-page-text {
+    color: #111314;
+}
+
 /* Header Image */
 .header-img-container {
     text-align: center;
@@ -89,6 +270,7 @@ a:focus, a:active {
 .header-img {
     width: 50%;
     height: auto;
+
 }
 
 /* Content Container */
@@ -99,10 +281,10 @@ a:focus, a:active {
     text-align: center;
 }
 
-/* Main Section */
+/* Main Section Styles */
 .main-header img {
     width: 100%;
-    max-width: 500px;
+    max-width: 500px; /* Sets a max width for main section images */
     height: auto;
     margin-bottom: 20px;
 }
@@ -126,36 +308,37 @@ h2.header-greeting {
     display: flex;
     justify-content: center;
     margin: 40px auto;
-    width: 100%;
+    width: 100%; /* Ensures the section takes full width */
 }
 
 .video-section iframe {
-    width: 800px;
-    height: 450px;
+    width: 800px; /* Set width to 800px */
+    height: 450px; /* Set height to 450px */
     border: none;
 }
 
-/* Section 4 */
+/* Section 4 (Why BeatBox VR) */
+
 .section-4 {
     margin: 100px auto;
 }
 
 .section-4-grid-container {
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 30px;
-    max-width: 800px;
+    grid-template-columns: repeat(2, 1fr); /* Two equal columns */
+    gap: 30px; /* Spacing between items */
+    width: 100%;
+    max-width: 800px; /* Centers grid with a max width */
     margin: 0 auto;
     padding-top: 40px;
 }
 
 .section-4 img {
     width: 100%;
-    max-width: 500px;
+    max-width: 500px; /* Ensures images don’t exceed a certain width */
     height: auto;
     margin-bottom: 20px;
 }
-
 .grid-item img {
     width: 75px;
     height: auto;
@@ -166,53 +349,80 @@ h2.header-greeting {
 }
 
 /* Awards Section */
+
 .award-container img {
     padding-top: 30px;
 }
 
-/* Contact Form */
+/* ======================================================
+   Contact Form Styles (Common for All Pages)
+========================================================= */
 .contact-form {
-    background-color: #f5f5f5;
+    background-color: #1e1e1e;
     padding: 40px 20px;
     border-radius: 10px;
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
     max-width: 800px;
     margin: 50px auto;
-    margin-top: 100px;
 }
 
 .contact-form h2 {
     font-size: 28px;
-    color: #131313;
+    font-weight: 600;
+    color: #fff;
     text-align: center;
     margin-bottom: 30px;
+}
+
+.contact-form form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
 }
 
 .contact-form .form-group {
     display: flex;
     flex-direction: column;
-    margin-bottom: 15px;
 }
 
 .contact-form .form-group label {
     font-size: 16px;
-    color: #777;
+    color: #aaa;
+    margin-bottom: 8px;
 }
 
-.contact-form .form-group input, 
+.contact-form .form-group input,
 .contact-form .form-group textarea {
     padding: 10px;
     font-size: 16px;
     border: 1px solid #444;
     border-radius: 5px;
-    background-color: #f0f0f0;
-    color: #333;
+    background-color: #2a2a2a;
+    color: #fff;
+    outline: none;
+    transition: border 0.3s ease;
+}
+
+.contact-form .form-group input:focus,
+.contact-form .form-group textarea:focus {
+    border-color: #314ec2;
+}
+
+.contact-form .form-group input::placeholder,
+.contact-form .form-group textarea::placeholder {
+    color: #777;
+}
+
+.contact-form .form-group textarea {
+    resize: vertical;
+    height: 150px;
 }
 
 .contact-form .submit-btn {
     background-color: #314ec2;
     color: #fff;
     font-size: 16px;
+    text-transform: uppercase;
     padding: 12px 20px;
     border: none;
     border-radius: 5px;
@@ -225,232 +435,21 @@ h2.header-greeting {
 }
 
 /* ======================================================
-   Projects Page Specific Styles
+   About Page Specific Styles (if needed in the future)
 ========================================================= */
-/* Hero Section */
-.section-1 {
-    width: 100%;
-    background-color: #1e1e1e;
-    padding: 50px 0;
-}
-
-.introduction-container {
-    width: 100%;
-    max-width: 1200px;
-    margin: 0 auto;
-    padding-left: 80px;
-    text-align: left;
-}
-
-.introduction-message-text-left {
-    font-size: 38px;
-    font-weight: 600;
-}
-
-.fade-text {
-    display: inline-block;
-    opacity: 0;
-    transition: opacity 2s ease-in-out;
-    font-size: 36px;
-    font-weight: 700;
-}
-
-.fade-in {
-    opacity: 1;
-}
-
-/* Button Styles */
-.learn-more-container {
-    margin-top: 20px;
-    text-align: left;
-}
-
-.page-link-button {
-    display: inline-block;
-    padding: 10px 20px;
-    font-size: 14px;
-    background-color: #314ec2;
-    color: #fff;
-    text-transform: uppercase;
-    text-decoration: none;
-    border-radius: 30px;
-    transition: background-color 0.3s ease;
-}
-
-.page-link-button:hover {
-    background-color: #1a73e8;
-}
-
-/* ---------- Projects Section ---------- */
-.projects-section {
-    padding: 60px 20px;
-    background-color: #1a1a1a;
-}
-
-.projects-grid-container {
-    display: flex;
-    flex-direction: column;
-    gap: 60px; /* Space between each project card */
-    max-width: 1240px;
-    margin: 0 auto;
-}
-
-/* Project Card Styling */
-.project-card {
-    display: grid;
-    grid-template-columns: 1fr 1fr; /* Two equal columns */
-    background-color: #1e1e1e;
-    border-radius: 20px;
-    padding: 40px;
-    align-items: center;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
-    transition: transform 0.3s ease;
-}
-
-/* Hover Effect */
-.project-card:hover {
-    transform: translateY(-5px);
-}
-
-/* Image within the project card */
-.project-image {
-    width: 100%;
-    max-width: 590px;
-    max-height: 350px;
-    border-radius: 20px;
-    object-fit: cover; /* Ensures images are contained and cropped to fit */
-    background-color: black;
-}
-
-/* Content within the project card */
-.project-content {
-    padding: 20px;
-    text-align: center;
-}
-
-.project-content h3 {
-    font-size: 28px;
-    font-weight: 600;
-    color: #fff;
-}
-
-.project-content .subtitle {
-    font-size: 16px;
-    color: #aaa;
-}
-
-.project-content blockquote {
-    font-size: 18px;
-    color: #ddd;
-}
-
-.project-content .view-case-study {
-    font-size: 16px;
-    color: #314ec2;
-    margin-bottom: 20px;
-    display: inline-block;
-    transition: color 0.3s ease;
-}
-
-.project-content .view-case-study:hover {
-    color: #1a73e8;
-}
-
-/* Alternate layout for every second item */
-.project-card:nth-child(even) {
-    grid-template-columns: 1fr 1fr;
-    direction: rtl; /* Reverse the direction of the grid */
-}
-
-.project-card:nth-child(even) .project-content {
-    direction: ltr; /* Ensure the text remains left-to-right */
-}
-
-/* Responsive adjustments */
-@media (max-width: 768px) {
-    .project-card {
-        grid-template-columns: 1fr; /* Single column on smaller screens */
-    }
-}
-
-
-/* ======================================================
-   Team Section
-========================================================= */
-.team-section {
-    padding: 60px 20px;
-    background-color: #2a2a2a;
-}
+/* ---------- About Page Title and Description ---------- */
 
 .team-intro-container {
-    margin: 50px 50px 0 50px
+    margin: 2% 15% 0 15%;
+    align-items: center;
 }
-
-.team-heading {
-    font-size: 36px;
-    color: #fff;
-    margin-bottom: 20px;
-}
-
-.team-description {
-    font-size: 16px;
-    color: #ccc;
-    margin-bottom: 40px;
-}
-
-.team-grid-container {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-    gap: 20px;
-    margin: 10px;
-}
-
-.member-wrap {
-    text-align: center;
-    padding: 20px;
-    border-radius: 10px;
-    background-color: #1e1e1e;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Increased blur radius for a softer shadow */
-    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth transition */
-}
-
-.team-photo {
-    width: 100%;
-    border-radius: 5px;
-}
-
-.member-name-txt {
-    font-size: 20px;
-    font-weight: 500;
-    color: #fff;
-}
-
-.member-description-txt {
-    font-size: 16px;
-    color: #ccc;
-}
-
-.degree-name, .uni-name {
-    font-size: 14px;
-    color: #888;
-}
-
-.uni-name {
-    font-size: 12px;
-    color: #aaa;
-}
-
-
-/* ======================================================
-   About Us
-========================================================= */
 
 /* ---------- Team Section for About Page ---------- */
 .about-grid-container {
     display: flex;
     flex-direction: column;
     gap: 30px; /* Space between each team member */
-    max-width: 1240px;
+    max-width: 1400px;
     margin: 0 auto; /* Center the grid */
     padding-top: 40px;
 }
@@ -460,9 +459,11 @@ h2.header-greeting {
     display: flex;
     align-items: flex-start; /* Align content to the top */
     background-color: #1e1e1e;
+    margin: 0 10%;
     padding: 40px;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); /* Add shadow effect */
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.25); /* Add shadow effect */
     transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border-radius: 4px;
 }
 
 /* Image Styling */
@@ -535,21 +536,4 @@ h2.header-greeting {
     .member-content {
         text-align: center;
     }
-}
-
-
-
-/* ======================================================
-   Footer
-========================================================= */
-.footer {
-    background-color: #111314;
-    padding: 20px;
-    text-align: center;
-    color: #fff;
-}
-
-.footnote-txt {
-    font-size: 10px;
-    color: #888;
 }
