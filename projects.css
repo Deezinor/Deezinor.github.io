@@ -64,6 +64,16 @@ a:visited {
     color: #314ec2;
   }
 
+
+/* ---------- Project Title and Description ---------- */
+
+  .title-description-container {
+    margin-left: 12.5%;
+    margin-right: 12.5%;
+    margin-top: 2.5%;
+    margin-bottom: 1.5%;
+  }
+
 /* ---------- Projects Grid ---------- */
 .projects-grid-container {
     display: grid;
