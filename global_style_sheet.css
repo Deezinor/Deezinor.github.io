@@ -41,16 +41,16 @@ a:visited {
    Navigation Styles (Common for All Pages)
 ========================================================= */
 .navigation {
-    position: fixed; /* Make the navigation fixed at the top */
-    top: 0; /* Stick to the top of the viewport */
-    left: 0; /* Align to the left of the viewport */
-    width: 100%; /* Make the nav bar span the entire width */
-    z-index: 1000; /* Ensure it stays on top of other content */
-    background-color: #111314; /* Keep the same background color */
+    position: fixed; 
+    top: 0; 
+    left: 0; 
+    width: 100%; 
+    z-index: 1000; 
+    background-color: #111314; 
     display: flex;
     justify-content: space-between;
     padding: 20px 50px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Optional: Add a shadow for better visibility */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
 .nav-bar {
@@ -105,14 +105,14 @@ a:visited {
 }
 
 .fade-text {
-    opacity: 0; /* Start with the text hidden */
-    transform: translateY(20px); /* Slightly offset the text for a smoother animation */
-    transition: opacity 2s ease-in-out, transform 2s ease-in-out; /* Control the fade and slide effect */
+    opacity: 0; 
+    transform: translateY(20px); 
+    transition: opacity 2s ease-in-out, transform 2s ease-in-out; 
 }
 
 .fade-in {
-    opacity: 1; /* Text becomes visible */
-    transform: translateY(0); /* Slide the text back into place */
+    opacity: 1; 
+    transform: translateY(0); 
 }
 
 .index-projects-section {
@@ -122,15 +122,15 @@ a:visited {
 
 .index-projects-section .projects-grid-container {
     display: flex;
-    flex-direction: column; /* Stack projects vertically */
+    flex-direction: column; 
     gap: 60px;
-    max-width: 800px; /* Centered single-column layout */
+    max-width: 800px; 
     margin: 0 auto;
 }
 
 .index-projects-section .project-card {
     display: flex;
-    flex-direction: row-reverse; /* Image on the right, content on the left */
+    flex-direction: row-reverse; 
     background-color: #1e1e1e;
     border-radius: 10px;
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
@@ -138,11 +138,11 @@ a:visited {
 }
 
 .index-projects-section .project-card:nth-child(even) {
-    flex-direction: row; /* Alternate the layout for even items */
+    flex-direction: row; 
 }
 
 .index-projects-section .project-image {
-    width: 40%; /* Make the image smaller */
+    width: 40%; 
     object-fit: cover;
     border-radius: 10px;
 }
@@ -161,11 +161,11 @@ a:visited {
 /* Responsive adjustments for smaller screens */
 @media (max-width: 768px) {
     .index-projects-section .project-card {
-        flex-direction: column; /* Stack image and content vertically */
+        flex-direction: column; 
     }
 
     .index-projects-section .project-image {
-        width: 100%; /* Image takes full width on small screens */
+        width: 100%; 
         margin-bottom: 20px;
     }
 }
@@ -210,8 +210,8 @@ a:visited {
     padding: 20px;
     border-radius: 10px;
     background-color: #1e1e1e;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Increased blur radius for a softer shadow */
-    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth transition */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); 
+    transition: transform 0.3s ease, box-shadow 0.3s ease; 
 }
 
 .team-photo {
@@ -266,7 +266,7 @@ a:visited {
 
 .projects-page-section .projects-grid-container {
     display: grid;
-    grid-template-columns: repeat(2, 1fr); /* Two-column grid layout */
+    grid-template-columns: repeat(2, 1fr); 
     gap: 30px;
     max-width: 1240px;
     margin: 0 auto;
@@ -309,7 +309,7 @@ a:visited {
 /* Responsive adjustments for smaller screens */
 @media (max-width: 768px) {
     .projects-page-section .projects-grid-container {
-        grid-template-columns: 1fr; /* Single column on smaller screens */
+        grid-template-columns: 1fr; 
     }
 }
 
@@ -347,7 +347,7 @@ a:visited {
 /* Main Section Styles */
 .main-header img {
     width: 100%;
-    max-width: 500px; /* Sets a max width for main section images */
+    max-width: 500px; 
     height: auto;
     margin-bottom: 20px;
 }
@@ -371,12 +371,12 @@ h2.header-greeting {
     display: flex;
     justify-content: center;
     margin: 40px auto;
-    width: 100%; /* Ensures the section takes full width */
+    width: 100%; 
 }
 
 .video-section iframe {
-    width: 800px; /* Set width to 800px */
-    height: 450px; /* Set height to 450px */
+    width: 800px; 
+    height: 450px; 
     border: none;
 }
 
@@ -388,17 +388,17 @@ h2.header-greeting {
 
 .section-4-grid-container {
     display: grid;
-    grid-template-columns: repeat(2, 1fr); /* Two equal columns */
-    gap: 30px; /* Spacing between items */
+    grid-template-columns: repeat(2, 1fr); 
+    gap: 30px; 
     width: 100%;
-    max-width: 800px; /* Centers grid with a max width */
+    max-width: 800px; 
     margin: 0 auto;
     padding-top: 40px;
 }
 
 .section-4 img {
     width: 100%;
-    max-width: 500px; /* Ensures images don’t exceed a certain width */
+    max-width: 500px; 
     height: auto;
     margin-bottom: 20px;
 }
@@ -511,31 +511,32 @@ h2.header-greeting {
 .about-grid-container {
     display: flex;
     flex-direction: column;
-    gap: 30px; /* Space between each team member */
+    gap: 30px;
     max-width: 1400px;
-    margin: 0 auto; /* Center the grid */
+    margin: 0 auto; 
     padding-top: 40px;
+    margin-bottom: 10px;
 }
 
 /* Each Member Item Container */
 .about-grid-item {
     display: flex;
-    align-items: flex-start; /* Align content to the top */
+    align-items: flex-start; 
     background-color: #1e1e1e;
     margin: 0 10%;
     padding: 40px;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.25); /* Add shadow effect */
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.25);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
     border-radius: 4px;
 }
 
 /* Image Styling */
 .member-grid-photo {
-    width: 150px; /* Fixed width for the image */
+    width: 150px; 
     height: auto;
-    margin-right: 20px; /* Space between the image and the text */
-    object-fit: cover; /* Keep the image proportional */
-    border-radius: 5px; /* Remove border radius */
+    margin-right: 20px; 
+    object-fit: cover; 
+    border-radius: 5px; 
 }
 
 /* Text Alignment */
@@ -547,7 +548,6 @@ h2.header-greeting {
     font-size: 24px;
     font-weight: 600;
     color: #fff;
-    margin-bottom: 5px;
 }
 
 .member-degree {
@@ -558,8 +558,8 @@ h2.header-greeting {
 .member-description {
     font-size: 12px;
     color: #aaa;
-    padding-top: 5px;
-    padding-bottom: 5px;
+    padding-bottom: 10px;
+    margin-top: -5px;
 }
 
 .contact-details {
@@ -570,30 +570,47 @@ h2.header-greeting {
 }
 
 .member-phone, .member-email {
-    font-weight: 300;
+    font-weight: 200;
     font-size: 14px;
 }
 
 .member-phone strong, .member-email strong {
-    font-weight: 400; 
+    font-weight: 300; 
 }
 
 .copyable {
-    cursor: pointer; /* Show pointer on hover to indicate clickability */
-    text-decoration: underline; /* Optional: visually distinguish clickable text */
+    cursor: pointer; 
+    text-decoration: underline; 
+}
+
+.contact-info {
+    display: flex;          
+    align-items: center;
+    padding: 5px 0;
+}
+
+.contact-icon {
+    margin-right: 10px;      
+    width: 20px;             
+    height: auto;
+    padding-right: 10px;
+}
+
+.member-phone {
+    margin: 0;               
 }
 
 
 /* Responsive Adjustments for smaller screens */
 @media (max-width: 768px) {
     .about-grid-item {
-        flex-direction: column; /* Stack image and text on smaller screens */
+        flex-direction: column; 
         text-align: center;
     }
 
     .member-grid-photo {
-        margin-right: 0; /* Remove right margin on small screens */
-        margin-bottom: 20px; /* Add bottom margin for spacing */
+        margin-right: 0; 
+        margin-bottom: 20px; 
     }
 
     .member-content {
@@ -606,10 +623,23 @@ h2.header-greeting {
 ========================================================= */
 footer {
     display: flex;
-    align-items: center;
-    justify-content: center;
+    flex-direction: column;         
+    align-items: center;            
+    justify-content: center;        
+    bottom: 0;                      
+    left: 0;
+    width: 100%;                    
+    background-color: #111;         
+    padding: 10px 0;                
+    margin-top: 10px;
 }
+
 .footnote-txt {
     font-size: 0.75rem;
     color: #888;
+    text-align: center;             
+}
+
+footer div {
+    margin: 5px 0;                  
 }
