@@ -1,64 +1,160 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Portfolio Website</title>
 
     <!-- Google Fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100..900&family=Roboto:wght@100;300;400;500;700;900&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100..900&family=Roboto:wght@100;300;400;500;700;900&display=swap"
+      rel="stylesheet"
+    />
 
     <!-- Stylesheet -->
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="styles.css" />
 
     <!-- Scripts -->
-     <script src="./script.js"></script>
+    <script src="./script.js"></script>
 
     <!-- Tab Icon -->
-     <link rel="icon" type="image/jpg" href="./Assets/R_Icon.png">
+    <link rel="icon" type="image/jpg" href="./Assets/R_Icon.png" />
+  </head>
 
-</head>
-
-<body class="index-page">
-
+  <body class="index-page">
     <!-- ==============================
          Navigation
     ================================= -->
     <header class="navigation">
-        <a href="index.html" class="logo-link">
-            <h1>Reality-B</h1>
+      <a href="index.html" class="logo-holder">
+        <h1 class="logo">REALITY-B</h1>
+      </a>
+      <nav class="nav-bar">
+        <ul id="menu">
+          <li>
+            <a href="index.html" class="navigation-item">HOME</a>
+          </li>
+          <li>
+            <a href="Services.html" class="navigation-item">SERVICES</a>
+          </li>
+          <li>
+            <a href="#" class="navigation-item">PROJECTS</a>
+          </li>
+          <li>
+            <a href="#" class="navigation-item">ABOUT US</a>
+          </li>
+          <li>
+            <a href="#" class="navigation-item contact button">CONTACT US</a>
+          </li>
+        </ul>
+        <a href="#" class="mobile-toggle" onClick="toggleMobileMenu();">
+          <svg
+            class="w-6 h-6 text-gray-800 dark:text-white"
+            aria-hidden="true"
+            xmlns="http://www.w3.org/2000/svg"
+            width="24"
+            height="24"
+            fill="none"
+            viewBox="0 0 24 24"
+          >
+            <path
+              stroke="currentColor"
+              stroke-linecap="round"
+              stroke-width="2"
+              d="M5 7h14M5 12h14M5 17h14"
+            />
+          </svg>
         </a>
-        <nav class="nav-bar">
-            <a href="#" class="navigation-item">Home</a>
-            <a href="#" class="navigation-item">Projects</a>
-            <a href="#" class="navigation-item">Services</a>
-            <a href="#" class="navigation-item">About</a>
-            <a href="#" class="navigation-item contact">Contact</a>
-        </nav>
+      </nav>
     </header>
 
     <main>
+      <section class="hero container">
+        <div class="hero-reel">
+          <img src="/Assets/BBVR_logo.gif"  alt="BeatBoxVR Logo"  class="demo-reel"  width="100%"/>
+        </div>
+        <a href="#" class="scroll-down">
+          <svg class="w-6 h-6 text-gray-800 dark:text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24">
+            <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m19 9-7 7-7-7"/>
+          </svg>          
+        </a>
+      </section>
 
+      <section class="about container">
+        <h2>About Us</h2>
+        <p>We are a startup founded by an assorted team of Master's Graduates in VR and AR. Our unique blend of expertise comes from diverse cultural and educational backgrounds, allowing us to bring fresh perspectives and create innovative XR solutions across various genres.</p>
+      </section>
+
+      <section class="awards container">
+        <h2 class="awards-title">Awards</h2>
+        <div class="award-images grid">
+          <div class="grid-item">
+            <img src="/Assets/placeholder-image.webp" alt="Innovate UK Logo">
+          </div>
+          <div class="grid-item">
+            <img src="/Assets/placeholder-image.webp" alt="XR Hack Logo">
+          </div>
+          <div class="grid-item">
+            <img src="/Assets/placeholder-image.webp" alt="Digital Heritage Logo">
+          </div>
+        </div>
+        <p class="awards-paragraph">We have been awarded multiple awards from organisation and competitions in different countries across the globe.</p>
+        <p class="awards-paragraph">Get in touch to start the process of designing a high-quality one-off experience.</p>
+        <div class="contact-button button">Contact Us</div>
+      </section>
+
+      <section class="team">
+        <h2>THE TEAM</h2>
+        <div class="grid">
+          <div class="grid-item">
+            <img src="Assets/Graduation photo.jpg" alt="">
+            <h4>JAKE BOULTON</h4>
+            <p class="small-font">XR DESIGNER</p>
+          </div>
+          <div class="grid-item">
+            <img src="Assets/Graduation photo.jpg" alt="">
+            <h4>JAKE BOULTON</h4>
+            <p class="small-font">XR DESIGNER</p>
+          </div>
+          <div class="grid-item">
+            <img src="Assets/Graduation photo.jpg" alt="">
+            <h4>JAKE BOULTON</h4>
+            <p class="small-font">XR DESIGNER</p>
+          </div>
+          <div class="grid-item">
+            <img src="Assets/Graduation photo.jpg" alt="">
+            <h4>JAKE BOULTON</h4>
+            <p class="small-font">XR DESIGNER</p>
+          </div>
+          <div class="grid-item">
+            <img src="Assets/Graduation photo.jpg" alt="">
+            <h4>JAKE BOULTON</h4>
+            <p class="small-font">XR DESIGNER</p>
+          </div>
+          <div class="grid-item">
+            <img src="Assets/Graduation photo.jpg" alt="">
+            <h4>JAKE BOULTON</h4>
+            <p class="small-font">XR DESIGNER</p>
+          </div>
+        </div>
+      </section>
     </main>
 
     <!-- ==============================
          Footer
     ================================= -->
     <footer class="footer">
-        <nav class="footer">
-            <a href="#" class="footer footer__item">Privacy Policy</a>
-            <a href="#" class="footer footer__item">Terms of Use</a>
-            <a href="#" class="footer footer__item">Press Kit</a>
-        </nav>
-        <p class="footnote-txt">© 2024 Reality-B. All rights reserved.</p>
+      <nav class="footer">
+        <a href="#" class="footer footer__item">Privacy Policy</a>
+        <a href="#" class="footer footer__item">Terms of Use</a>
+        <a href="#" class="footer footer__item">Press Kit</a>
+      </nav>
+      <p class="footnote-txt">© 2024 Reality-B. All rights reserved.</p>
     </footer>
 
     <!-- Script for Typewriter Effect -->
     <script src="script.js"></script>
-
-</body>
-
+  </body>
 </html>
