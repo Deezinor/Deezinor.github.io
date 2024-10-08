@@ -78,6 +78,13 @@ a {
     text-decoration: none;
 }
 
+a:focus,
+a:hover,
+a:active {
+    text-decoration: none;
+    columns: var(--colora);
+}
+
 h1 {
     font-size: var(--h1-size);
     line-height: var(--heading-line-height);
@@ -97,6 +104,10 @@ h3 {
 h4 {
     font-size: var(--h4-size);
     line-height: var(--heading-line-height);
+}
+
+.light {
+    color: var(--gray90);
 }
 
 section {
@@ -137,6 +148,8 @@ header {
         justify-content: space-between;
         align-items: center;
 
+        margin: auto;
+
         width: 100%;
         max-width: 1440px;
 
@@ -148,6 +161,20 @@ header {
                 color: var(--white);
             }
         }
+
+    }
+    
+    .logo-holder .logo {
+        color: var(--white);
+    }
+
+    .logo-holder .logo:focus
+    .logo-holder .logo:hover {
+        color: var(--white);
+    }
+    
+    .logo-holder .logo:active {
+        color: var(--colora);
     }
 
     nav {
@@ -267,16 +294,12 @@ header {
     }
 }
 
-.awards {
+.awards, .dark-background {
     display: flex;
     flex-direction: column;
     background-color: var(--gray10);
     padding: 60px 0;
     max-width: none;
-
-    .awards-title {
-        color: var(--gray90)
-    }
 
     .grid {
         display: flex;
@@ -328,12 +351,15 @@ header {
             img {
                 width: 320px;
                 height: auto;
+                max-height: 320px;
                 margin-bottom: 20px;
+                object-fit: cover;                
             }
 
             h4 {
                 font-size: var(--h6-size);
-                margin-bottom: 40px;
+                margin-top: 8px;
+                margin-bottom: 4px;
             }
 
             .small-font {
@@ -345,11 +371,16 @@ header {
 
 }
 
+.contact {
+
+}
+
 /* ===== Services Page ===== */
 .services-tiles {
     display: flex;
     flex-direction: column;
     justify-content: center;
+    margin: auto;
     margin-top: 160px;
     max-width: 1440px;
     width: 100%;
@@ -421,13 +452,14 @@ header {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    margin-top: 160px;
-    max-width: 1440px;
+    margin: auto;
+    padding-top: 120px;
     width: 100%;
+    background-color: var(--gray10);
     
     .grid-container {
         display: flex;
-        justify-content: space-evenly;
+        justify-content: space-between;
         align-items: flex-start;
         flex-wrap: wrap;
         max-width: 1440px;
@@ -441,20 +473,44 @@ header {
 
             flex-direction: column;
             align-items: center;
+            justify-content: center;
 
-            flex: 1 1 30%;
-            min-width: 30%;
+            flex: 1 1 calc(25% - 30px);
+            min-width: calc(25% - 30px);
+            max-width: 200px;
+            height: 200px;
             margin-bottom: 160px;
 
             text-wrap: nowrap;
 
-            svg {
+            border: solid var(--gray50) 2px;
+            border-radius: 16px;
+
+            svg, img {
                 margin-bottom: 20px;
                 width: 60px;
-                height: 60px;
-                
+                height: 60px;   
+            }
+
+            h4 {
+                color: var(--gray70);
+                font-weight: 400;
             }
         }
+    }
+}
+
+@media (max-width: 1024px) {
+    .skills .grid-container .grid-item {
+        flex: 1 1 45%; /* 2 items per row on medium screens */
+        max-width: 45%; /* Adjust width accordingly */
+    }
+}
+
+@media (max-width: 768px) {
+    .skills .grid-container .grid-item {
+        flex: 1 1 100%; /* 1 item per row on small screens */
+        max-width: 100%;
     }
 }
 
@@ -464,15 +520,45 @@ footer {
     display: flex;
     flex-direction: column;
     align-items: center;
-    background-color: var(--primary-color);
-    padding: 0 50px;
+    background-color: var(--gray10);
+    padding: 50px;
+    margin: 0;
+    width: 100%;
 
     .footer {
         display: flex;
-        gap: 100px;
+        justify-content: space-evenly;
+        text-wrap: nowrap;
+        max-width: 1440px;
+        width: 100%;
 
-        .footer__item {
+        .footer__item,
+        .footer__item:active,
+        .footer__item:focus,
+        .footer__item:hover {
             padding-bottom: 20px;
+            color: var(--gray70);
+        }
+
+        .footer__item:hover {
+            text-decoration: underline;
+        }
+
+    }
+    
+    p {
+        color: var(--gray50);
+        font-size: var(--small-size);
+        font-weight: 200;
+    }
+
+    @media (max-width: 764px) {
+        .footer {
+            display: flex;
+            align-items: center;
+            flex-direction: column;
+            flex-wrap: wrap;
+            gap: 0;
         }
     }
 }
