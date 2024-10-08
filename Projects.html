@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Projects</title>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100..900&family=Roboto:wght@100;300;400;500;700;900&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Stylesheet -->
+    <link rel="stylesheet" href="styles.css" />
+
+    <!-- Tab Icon -->
+    <link rel="icon" type="image/jpg" href="./Assets/R_Icon.png" />
+  </head>
+  <body>
+    <!-- ==============================
+         Navigation
+    ================================= -->
+    <header class="navigation">
+      <a href="index.html" class="logo-holder">
+        <h1 class="logo">REALITY-B</h1>
+      </a>
+      <nav class="nav-bar">
+        <ul id="menu">
+          <li>
+            <a href="index.html" class="navigation-item">HOME</a>
+          </li>
+          <li>
+            <a href="Services.html" class="navigation-item">SERVICES</a>
+          </li>
+          <li>
+            <a href="Projects.html" class="navigation-item">PROJECTS</a>
+          </li>
+          <li>
+            <a href="About.html" class="navigation-item">ABOUT US</a>
+          </li>
+          <li>
+            <a href="contact.html" class="navigation-item contact button">CONTACT US</a>
+          </li>
+        </ul>
+        <a href="#" class="mobile-toggle" onClick="toggleMobileMenu();">
+          <svg
+            class="w-6 h-6 text-gray-800 dark:text-white"
+            aria-hidden="true"
+            xmlns="http://www.w3.org/2000/svg"
+            width="24"
+            height="24"
+            fill="none"
+            viewBox="0 0 24 24"
+          >
+            <path
+              stroke="currentColor"
+              stroke-linecap="round"
+              stroke-width="2"
+              d="M5 7h14M5 12h14M5 17h14"
+            />
+          </svg>
+        </a>
+      </nav>
+    </header>
+
+    <main>
+      <section class="hero container">
+        <div class="hero-reel">
+          <img
+            src="/Assets/customize_environment.gif"
+            alt="BeatBoxVR Logo"
+            class="demo-reel"
+            width="100%"
+          />
+        </div>
+      </section>
+
+      <section class="projects container">
+        <div class="filter">
+          <ul class="filter-container">
+            <li class="filter-list-item"><a data-filter="all">All</a></li>
+            <li class="filter-list-item">
+              <a data-filter="vr">Virtual Reality</a>
+            </li>
+            <li class="filter-list-item">
+              <a data-filter="mr">Mixed Reality</a>
+            </li>
+            <li class="filter-list-item"><a data-filter="games">Games</a></li>
+            <li class="filter-list-item">
+              <a data-filter="heritage">Cultural Heritage</a>
+            </li>
+          </ul>
+        </div>
+
+        <div class="wrapper">
+          <div class="grid-container">
+            <div class="grid-item games vr mr">
+              <a href="beatbox.html" class="grid-item-link">
+                <img src="Assets/202410_BeatBox-VR_Logo.png" />
+                <div class="description">
+                  <h4><a href="beatbox.html">BeatBox-VR</a></h4>
+                  <p>Virtual Reality Drumming Experience</p>
+                </div>
+              </a>
+            </div>
+
+            <div class="grid-item mr">
+              <a href="#" class="grid-item-link">
+                <img src="Assets/Habibi Logo.png" />
+                <div class="description">
+                  <h4><a href="beatbox.html">Habibi</a></h4>
+                  <p>Virtual Reality Drumming Experience</p>
+                </div>
+              </a>
+            </div>
+
+            <div class="grid-item heritage games vr">
+              <a href="#" class="grid-item-link">
+                <img src="Assets/2024_SXR_Ai_GameTitle_v2.png" />
+                <div class="description">
+                  <h4><a href="beatbox.html">Midnight at the Pagoda</a></h4>
+                  <p>Virtual Reality Drumming Experience</p>
+                </div>
+              </a>
+            </div>
+
+            <div class="grid-item mr games">
+              <a href="#" class="grid-item-link">
+                <img src="Assets/2024_GoFish_Logo.png" class="no-padding" />
+                <div class="description">
+                  <h4><a href="beatbox.html">Go Fish!</a></h4>
+                  <p>Virtual Reality Drumming Experience</p>
+                </div>
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="contact container">
+        <div class="contact-container">
+          <h2 class="contact-title light">Let's build your ideas together</h2>
+          <form action="" class="contact-form">
+            <h4 class="contact-form-title light">Get in touch with us!</h4>
+            <hr>
+            <input type="text" name="name" placeholder="Your Name" class="contact-inputs" required>
+            <input type="email" name="email" placeholder="Your Email" class="contact-inputs" required>
+            <textarea name="message" placeholder="Message" class="contact-inputs" required></textarea>
+            <button type="submit">Submit <img src="Assets/arrow_right_white.png" alt="arrow right" class="button-arrow"></button>
+          </form>
+        </div>
+      </section>
+      
+    </main>
+
+    <!-- ==============================
+         Footer
+    ================================= -->
+    <footer class="footer">
+      <nav class="footer">
+        <a href="#" class="footer footer__item">Privacy Policy</a>
+        <a href="#" class="footer footer__item">Terms of Use</a>
+        <a href="#" class="footer footer__item">Press Kit</a>
+      </nav>
+      <p>© 2024 Reality-B. All rights reserved.</p>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="./script.js"></script>
+
+  </body>
+</html>

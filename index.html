@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Portfolio Website</title>
+    <title>Reality B</title>
 
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -40,13 +40,15 @@
             <a href="Services.html" class="navigation-item">SERVICES</a>
           </li>
           <li>
-            <a href="#" class="navigation-item">PROJECTS</a>
+            <a href="Projects.html" class="navigation-item">PROJECTS</a>
           </li>
           <li>
-            <a href="#" class="navigation-item">ABOUT US</a>
+            <a href="About.html" class="navigation-item">ABOUT US</a>
           </li>
           <li>
-            <a href="#" class="navigation-item contact button">CONTACT US</a>
+            <a href="contact.html" class="navigation-item contact button "
+              >CONTACT US</a
+            >
           </li>
         </ul>
         <a href="#" class="mobile-toggle" onClick="toggleMobileMenu();">
@@ -115,17 +117,21 @@
         <h2 class="awards-title light">Awards</h2>
         <div class="award-images grid">
           <div class="grid-item">
-            <img src="/Assets/ukri-innovate-uk-square-logo.png" alt="Innovate UK Logo" />
+            <img
+              src="/Assets/ukri-innovate-uk-square-logo.png"
+              alt="Innovate UK Logo"
+            />
             <p class="award-title">Jury Prize Winner</p>
           </div>
           <div class="grid-item">
             <img src="/Assets/XR Hack.svg" alt="XR Hack Logo" />
-            <p class="award-title">Jury Prize Winner</p>
+            <p class="award-title">Runner's Up</p>
           </div>
           <div class="grid-item">
             <img
-            src="/Assets/digital heritage.jpg"
-            alt="Digital Heritage Logo"
+              class="Digital-heritage"
+              src="/Assets/digital heritage.jpg"
+              alt="Digital Heritage Logo"
             />
             <p class="award-title">Jury Prize Winner</p>
           </div>
@@ -138,7 +144,7 @@
           Get in touch to start the process of designing a high-quality one-off
           experience.
         </p>
-        <a href="#" class="contact-button button">Contact Us</a>
+        <a href="contact.html" class="contact-button button">Contact Us</a>
       </section>
 
       <section class="team">
@@ -178,7 +184,17 @@
       </section>
 
       <section class="contact dark-background container">
-        <h2 class="light">Contact Us</h2>
+        <div class="contact-container">
+          <h2 class="contact-title light">Contact Us</h2>
+          <form action="" class="contact-form">
+            <h4 class="contact-form-title light">Get in touch with us!</h4>
+            <hr>
+            <input type="text" name="name" placeholder="Your Name" class="contact-inputs" required>
+            <input type="email" name="email" placeholder="Your Email" class="contact-inputs" required>
+            <textarea name="message" placeholder="Message" class="contact-inputs" required></textarea>
+            <button type="submit">Submit <img src="Assets/arrow_right_white.png" alt="arrow right" class="button-arrow"></button>
+          </form>
+        </div>
       </section>
     </main>
 

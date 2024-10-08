@@ -74,8 +74,11 @@ body {
     overflow-wrap: break-word;
 }
 
-a {
+a,
+a:link,
+a:visited {
     text-decoration: none;
+    color: var(--gray5);
 }
 
 a:focus,
@@ -118,6 +121,14 @@ section {
 
 .page-section {
     position: relative;
+}
+
+.dark-background {
+    display: flex;
+    flex-direction: column;
+    background-color: var(--gray10);
+    padding: 60px 0;
+    max-width: none;
 }
 
 /* ===== Header ===== */
@@ -185,24 +196,25 @@ header {
             display: flex;
             list-style-type: none;
             gap: 30px;
-
+            
             li {
                 display: flex;
                 align-items: center;
-
+                
                 a {
                     display: inline-block;
                     padding: 10px 20px;
-                    color: var(--gray90);
-
+                    color: var(--white) !important;
+                    
                     &:hover {
                         text-decoration: underline;
                     }
                 }
 
+                
                 .contact {
                     background-color: var(--white);
-                    color: var(--gray30);
+                    color: var(--gray30) !important;
                     font-weight: 700;
                     padding: 30px 20px;
                 }
@@ -220,6 +232,7 @@ header {
             }
         }
     }
+
 
     @media (max-width: 1024px) {
         flex-direction: column;
@@ -267,6 +280,8 @@ header {
     width: 100%;
     max-width: none;
     background-color: var(--black);
+    flex-direction: column;
+
     .hero-reel {
         align-items: center;
         justify-content: center;
@@ -277,6 +292,8 @@ header {
         }
     }
     .scroll-down {
+        margin-top: -40px;
+        padding-bottom: 20px;
         color: var(--white);
         scale: 2;
     }
@@ -294,22 +311,32 @@ header {
     }
 }
 
-.awards, .dark-background {
-    display: flex;
-    flex-direction: column;
-    background-color: var(--gray10);
-    padding: 60px 0;
+.awards {
     max-width: none;
 
     .grid {
         display: flex;
         flex-direction: row;
         gap: 80px;
+        align-items: start;
+
+        
 
         img {
-            width: 200px;
+            width: 200px;           
         }
     }
+    
+    .grid-item {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .award-title {
+        color: var(--gray90);
+    }
+
     .awards-paragraph {
         max-width: 1120px;
         color: var(--gray70);
@@ -372,7 +399,89 @@ header {
 }
 
 .contact {
+    max-width: none;
+    margin: 0;
+    padding: 40px 0; 
 
+    .contact-container {
+        background-color: var(--gray30);
+        padding: 40px;
+        border-radius: 8px;
+        width: 50%;
+
+        .contact-title {
+            margin-bottom: 20px;
+            color: var(--white);
+        }
+
+        .contact-form {
+            display: flex;
+            flex-direction: column;
+            align-items: start;
+            gap: 20px;
+
+            h4 {
+                font-weight: 300;
+            }
+
+            hr {
+                border: none;
+                width: 120px;
+                height: 5px;
+                background-color: var(--gray70);
+                border-radius: 10px;
+                margin-bottom: 20px;
+            }
+
+            .contact-inputs {
+                width: 100%;
+                height: 50px;
+                border: none;
+                outline: none;
+                border-radius: 4px;
+                padding-left: 25px;
+                font-weight: 100;
+                color: var(--gray50);
+
+            }
+            
+            .contact-inputs:focus {
+                border: 2px solid var(--colora);
+            }
+
+            .contact-inputs::placeholder {
+                color: var(--gray50);
+
+            }
+
+            textarea {
+                padding-top: 15px;
+                max-width: 100%;
+                min-width: 100%;
+            }
+
+            button {
+                display: flex;
+                align-items: center;
+                padding: 15px 30px;
+                color: var(--white);
+                gap: 10px;
+                border: none;
+                border-radius: 50px;
+                background: var(--colora);
+                cursor: pointer;
+
+                img {
+                    height: 25px;
+                    width: 30px;
+                }
+            }
+
+            button:hover {
+                text-decoration: underline;
+            }
+        }
+    }
 }
 
 /* ===== Services Page ===== */
@@ -513,6 +622,102 @@ header {
         max-width: 100%;
     }
 }
+
+
+
+/* ===== Footer ===== */
+.projects {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: auto;
+    width: 100%;
+    background-color: var(--gray90);
+
+    .wrapper {
+        display: flex;
+        margin: auto;
+        width: 70%;
+    }
+
+    .grid-container {
+        box-sizing: border-box;
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        grid-column-gap: 40px;
+        grid-row-gap: 40px;
+        grid-auto-rows: min-content;
+        padding: 3vw;
+        position: relative;
+        z-index: 1;
+        order: 1;
+    }
+
+    .grid-item-link {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        position: relative;
+        overflow: hidden;
+        padding: 4px;
+        order: 1;
+    }
+
+    .grid-item {
+        opacity: 1;
+        transition: opacity ease .2s;
+
+        img {
+            height: 250px;
+            width: auto;
+            background-color: black;
+            border-radius: 8px;
+            padding: 1vw;
+            object-fit: contain;
+
+            &.no-padding {
+                object-fit: fill;
+                padding: 0;
+            }
+        }
+    }
+
+    .grid-item:hover {
+        opacity: .8;
+    }
+
+    @media screen and (max-width: 767px) {
+        .grid-container {
+            padding-left: 6vw;
+            padding-right: 6vw;
+            grid-template-columns:repeat(1,minmax(0,1fr))
+        }        
+    }
+
+    .filter {
+        margin-top: 40px;
+        
+        ul {
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            gap: 16px;
+            list-style: none;
+            cursor: pointer;
+            text-wrap: none;
+
+            a:hover {
+                text-decoration: underline;
+            }
+        }
+
+        @media  screen and (max-width: 767px) {
+            margin: 25%;
+            align-items: center;                        
+        }
+    }
+}
+
 
 /* ===== Footer ===== */
 

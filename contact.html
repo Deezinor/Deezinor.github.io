@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us</title>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100..900&family=Roboto:wght@100;300;400;500;700;900&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Stylesheet -->
+    <link rel="stylesheet" href="styles.css" />
+
+    <!-- Scripts -->
+    <script src="./script.js"></script>
+
+    <!-- Tab Icon -->
+    <link rel="icon" type="image/jpg" href="./Assets/R_Icon.png" />
+</head>
+<body>
+    <!-- ==============================
+         Navigation
+    ================================= -->
+    <header class="navigation">
+        <a href="index.html" class="logo-holder">
+          <h1 class="logo">REALITY-B</h1>
+        </a>
+        <nav class="nav-bar">
+          <ul id="menu">
+            <li>
+              <a href="index.html" class="navigation-item">HOME</a>
+            </li>
+            <li>
+              <a href="Services.html" class="navigation-item">SERVICES</a>
+            </li>
+            <li>
+              <a href="Projects.html" class="navigation-item">PROJECTS</a>
+            </li>
+            <li>
+              <a href="About.html" class="navigation-item">ABOUT US</a>
+            </li>
+            <li>
+              <a href="contact.html" class="navigation-item contact button">CONTACT US</a>
+            </li>
+          </ul>
+          <a href="#" class="mobile-toggle" onClick="toggleMobileMenu();">
+            <svg
+              class="w-6 h-6 text-gray-800 dark:text-white"
+              aria-hidden="true"
+              xmlns="http://www.w3.org/2000/svg"
+              width="24"
+              height="24"
+              fill="none"
+              viewBox="0 0 24 24"
+            >
+              <path
+                stroke="currentColor"
+                stroke-linecap="round"
+                stroke-width="2"
+                d="M5 7h14M5 12h14M5 17h14"
+              />
+            </svg>
+          </a>
+        </nav>
+      </header>
+
+    <main>
+        <section class="hero container">
+            <div class="hero-reel">
+              <img
+                src="/Assets/TeamPhotoInnovate.JPG"
+                alt="BeatBoxVR Logo"
+                class="demo-reel"
+                width="100%"
+              />
+            </div>
+          </section>
+
+        <section class="contact dark-background container">
+            <div class="contact-container">
+              <h2 class="contact-title light">Contact Us</h2>
+              <form action="" class="contact-form">
+                <h4 class="contact-form-title light">Get in touch with us!</h4>
+                <hr>
+                <input type="text" name="name" placeholder="Your Name" class="contact-inputs" required>
+                <input type="email" name="email" placeholder="Your Email" class="contact-inputs" required>
+                <textarea name="message" placeholder="Message" class="contact-inputs" required></textarea>
+                <button type="submit">Submit <img src="Assets/arrow_right_white.png" alt="arrow right" class="button-arrow"></button>
+              </form>
+            </div>
+          </section>
+    </main>
+
+    <!-- ==============================
+         Footer
+    ================================= -->
+    <footer class="footer">
+        <nav class="footer">
+          <a href="#" class="footer footer__item">Privacy Policy</a>
+          <a href="#" class="footer footer__item">Terms of Use</a>
+          <a href="#" class="footer footer__item">Press Kit</a>
+        </nav>
+        <p>© 2024 Reality-B. All rights reserved.</p>
+      </footer>
+    
+</body>
+</html>
