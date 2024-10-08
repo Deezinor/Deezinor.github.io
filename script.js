@@ -1,25 +1,28 @@
-document.addEventListener('DOMContentLoaded', function () {
-    const words = ["Games.", "Cultural Heritage Exhibits.", "Communication Tools."];
-    let wordIndex = 0;
-    const fadeTextElement = document.getElementById('fade-word');
+// Function to toggle the mobile menu
+function toggleMobileMenu() {
+  document.getElementById("menu").classList.toggle("active");
+}
 
-    function changeWord() {
-        // Fade out the current word
-        fadeTextElement.classList.remove('fade-in');
+// Function to filter the project grid based on the selected category
+document.querySelectorAll('.filter-list-item a').forEach(filterLink => {
+  filterLink.addEventListener('click', function(e) {
+    e.preventDefault(); // Prevent the default link behavior
 
-        setTimeout(() => {
-            // Change the word after fade-out completes
-            wordIndex = (wordIndex + 1) % words.length;
-            fadeTextElement.textContent = words[wordIndex];
+    const filter = this.getAttribute('data-filter'); // Get the filter value (category)
+    console.log("Filter selected:", filter); // Log the selected filter
 
-            // Fade in the new word
-            fadeTextElement.classList.add('fade-in');
-        }, 2000);  // Match this to the CSS transition duration (2 seconds in this case)
-    }
+    const projects = document.querySelectorAll('.grid-item'); // Select all project items
 
-    // Initial fade-in
-    fadeTextElement.classList.add('fade-in');
-
-    // Change word every 4 seconds (give time for fade-out and fade-in)
-    setInterval(changeWord, 4000);
+    // Loop through all projects and show/hide based on the selected filter
+    projects.forEach(project => {
+      if (filter === 'all') {
+        project.style.display = 'block'; // Show all projects when "All" is selected
+      } else if (project.classList.contains(filter)) {
+        project.style.display = 'block'; // Show projects that match the selected category
+      } else {
+        project.style.display = 'none'; // Hide projects that don't match the selected category
+      }
+    });
+  });
 });
+

@@ -1,108 +1,153 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portfolio Website</title>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Reality B</title>
 
     <!-- Google Fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100..900&family=Roboto:wght@100;300;400;500;700;900&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100..900&family=Roboto:wght@100;300;400;500;700;900&display=swap"
+      rel="stylesheet"
+    />
 
     <!-- Stylesheet -->
-    <link rel="stylesheet" href="global_style_sheet.css">
-</head>
+    <link rel="stylesheet" href="styles.css" />
 
-<body class="index-page">
+    <!-- Scripts -->
+    <script src="./script.js"></script>
 
+    <!-- Tab Icon -->
+    <link rel="icon" type="image/jpg" href="./Assets/R_Icon.png" />
+  </head>
+
+  <body class="index-page">
     <!-- ==============================
          Navigation
     ================================= -->
     <header class="navigation">
-        <a href="index.html" class="logo-link">
-            <h1>Reality-B</h1>
+      <a href="index.html" class="logo-holder">
+        <h1 class="logo">REALITY-B</h1>
+      </a>
+      <nav class="nav-bar">
+        <ul id="menu">
+          <li>
+            <a href="index.html" class="navigation-item">HOME</a>
+          </li>
+          <li>
+            <a href="Services.html" class="navigation-item">SERVICES</a>
+          </li>
+          <li>
+            <a href="Projects.html" class="navigation-item">PROJECTS</a>
+          </li>
+          <li>
+            <a href="About.html" class="navigation-item">ABOUT US</a>
+          </li>
+          <li>
+            <a href="contact.html" class="navigation-item contact button "
+              >CONTACT US</a
+            >
+          </li>
+        </ul>
+        <a href="#" class="mobile-toggle" onClick="toggleMobileMenu();">
+          <svg
+            class="w-6 h-6 text-gray-800 dark:text-white"
+            aria-hidden="true"
+            xmlns="http://www.w3.org/2000/svg"
+            width="24"
+            height="24"
+            fill="none"
+            viewBox="0 0 24 24"
+          >
+            <path
+              stroke="currentColor"
+              stroke-linecap="round"
+              stroke-width="2"
+              d="M5 7h14M5 12h14M5 17h14"
+            />
+          </svg>
         </a>
-        <nav class="nav-bar">
-            <a href="projects.html" class="navigation-item">Projects</a>
-            <a href="about.html" class="navigation-item">About</a>
-            <a href="contact.html" class="navigation-item">Contact</a>
-        </nav>
+      </nav>
     </header>
 
-    <!-- ==============================
-         Hero Section
-    ================================= -->
-    <section class="section-1">
-        <div class="introduction-container">
-            <div class="introduction-wrap">
-                <div class="introduction-role-text">Multi-Award Winning XR Design Studio.</div>
-                <h1 class="introduction-message-text">We create <span id="fade-word" class="fade-text">Games.</span></h1>
-            </div>
-            <!--<div class="learn-more-container">
-                <a class="page-link-button" href="about.html">About Us</a>
-            </div>-->
+    <main>
+      <section class="hero container">
+        <div class="hero-reel">
+          <img
+            src="/Assets/BBVR_logo.gif"
+            alt="BeatBoxVR Logo"
+            class="demo-reel"
+            width="100%"
+          />
         </div>
-    </section>      
+        <a href="#" class="scroll-down">
+          <svg
+            class="w-6 h-6 text-gray-800 dark:text-white"
+            aria-hidden="true"
+            xmlns="http://www.w3.org/2000/svg"
+            width="24"
+            height="24"
+            fill="none"
+            viewBox="0 0 24 24"
+          >
+            <path
+              stroke="currentColor"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              d="m19 9-7 7-7-7"
+            />
+          </svg>
+        </a>
+      </section>
 
-    <!-- ==============================
-         Projects Section
-    ================================= -->
-    <section class="index-projects-section">
-        <div class="projects-grid-container">
+      <section class="about container">
+        <h2>About Us</h2>
+        <p>
+          We are a startup founded by an assorted team of Master's Graduates in
+          VR and AR. Our unique blend of expertise comes from diverse cultural
+          and educational backgrounds, allowing us to bring fresh perspectives
+          and create innovative XR solutions across various genres.
+        </p>
+      </section>
 
-            <!-- Project 1 -->
-            <div class="project-card">
-                <div class="project-content">
-                    <p class="view-case-study"><a href="BeatBoxVR.html">View case study →</a></p>
-                    <h3>BeatBox VR</h3>
-                    <p class="subtitle">Virtual Drumming and Music Creation Experience</p>
-                    <blockquote></blockquote>
-                    <p class="author">Master's Program Virtual Reality Module - Submission</p>
-                </div>
-                <img src="/Assets/BBVR_logo.gif" alt="BeatBox VR Logo gif" class="project-image">
-            </div>
-
-            <!-- Project 2 -->
-            <div class="project-card">
-                <div class="project-content">
-                    <p class="view-case-study"><a href="GoFish.html">View case study →</a></p>
-                    <h3>GoFish!</h3>
-                    <p class="subtitle">Mixed Reality Card Game</p>
-                    <blockquote>A mixed-reality take on the classic card game Go Fish.</blockquote>
-                    <p class="author">XR Hack London - Submission</p>
-                </div>
-                <img src="/Assets/2024_GoFish_Logo.png" alt="Go Fish Logo Image" class="project-image">
-            </div>
-
-            <!-- Project 3 -->
-            <div class="project-card">
-                <div class="project-content">
-                    <p class="view-case-study"><a href="DigitalHeritage.html">View case study →</a></p>
-                    <h3>Midnight at the Pagoda</h3>
-                    <p class="subtitle">Extended Reality Cultural Heritage Museum Exhibit</p>
-                    <blockquote></blockquote>
-                    <p class="author">Great Bao'en Temple Museum</p>
-                </div>
-                <img src="/Assets/2024_SXR_Ai_GameTitle_v2.png" alt="Gucci AR Fashion Show" class="project-image">
-            </div>
-
-            <!-- Project 4 -->
-            <div class="project-card">
-                <div class="project-content">
-                    <p class="view-case-study"><a href="Habibi.html">View case study →</a></p>
-                    <h3>Habibi</h3>
-                    <p class="subtitle">Mixed Reality Communication Tool</p>
-                    <blockquote></blockquote>
-                    <p class="author">XR Hack Istanbul - Submission</p>
-                </div>
-                <img src="/Assets/Habibi Logo.png" alt="Chanel AR Experience" class="project-image">
-            </div>
-
+      <section class="awards dark-background container">
+        <h2 class="awards-title light">Awards</h2>
+        <div class="award-images grid">
+          <div class="grid-item">
+            <img
+              src="/Assets/ukri-innovate-uk-square-logo.png"
+              alt="Innovate UK Logo"
+            />
+            <p class="award-title">Jury Prize Winner</p>
+          </div>
+          <div class="grid-item">
+            <img src="/Assets/XR Hack.svg" alt="XR Hack Logo" />
+            <p class="award-title">Runner's Up</p>
+          </div>
+          <div class="grid-item">
+            <img
+              class="Digital-heritage"
+              src="/Assets/digital heritage.jpg"
+              alt="Digital Heritage Logo"
+            />
+            <p class="award-title">Jury Prize Winner</p>
+          </div>
         </div>
-    </section>
+        <p class="awards-paragraph">
+          We have been awarded multiple awards from organisation and
+          competitions in different countries across the globe.
+        </p>
+        <p class="awards-paragraph">
+          Get in touch to start the process of designing a high-quality one-off
+          experience.
+        </p>
+        <a href="contact.html" class="contact-button button">Contact Us</a>
+      </section>
 
+<<<<<<< HEAD
     <!-- ==============================
         Team Section
     ================================= -->
@@ -144,19 +189,72 @@
                     <p class="uni-name">University of the West of England, England</p>
                 </div>
             </div>
+=======
+      <section class="team">
+        <h2>THE TEAM</h2>
+        <div class="grid">
+          <div class="grid-item">
+            <img src="Assets/Graduation photo.jpg" alt="" />
+            <h4>JAKE BOULTON</h4>
+            <p class="small-font">UX / XR DESIGNER</p>
+          </div>
+          <div class="grid-item">
+            <img src="Assets/Mai.jpeg" alt="" />
+            <h4>MAI YE</h4>
+            <p class="small-font">UNITY DEVELOPER</p>
+          </div>
+          <div class="grid-item">
+            <img src="Assets/Nathan.jpeg" alt="" />
+            <h4>NATHAN THOMAS-BENKE</h4>
+            <p class="small-font">UNITY DEVELOPER</p>
+          </div>
+          <div class="grid-item">
+            <img src="Assets/Hwanjoon.jpeg" alt="" />
+            <h4>HWANJOON JANG</h4>
+            <p class="small-font">UNITY DEVELOPER</p>
+          </div>
+          <div class="grid-item">
+            <img src="Assets/Josh.jpeg" alt="" />
+            <h4>JOSHUA DAVIES</h4>
+            <p class="small-font">UNITY DEVELOPER</p>
+          </div>
+          <div class="grid-item">
+            <img src="Assets/Mo.jpeg" alt="" />
+            <h4>MO EL ELYRAN</h4>
+            <p class="small-font">XR DESIGNER</p>
+          </div>
+>>>>>>> Redesign/Sept_2024
         </div>
-    </section>
+      </section>
+
+      <section class="contact dark-background container">
+        <div class="contact-container">
+          <h2 class="contact-title light">Contact Us</h2>
+          <form action="" class="contact-form">
+            <h4 class="contact-form-title light">Get in touch with us!</h4>
+            <hr>
+            <input type="text" name="name" placeholder="Your Name" class="contact-inputs" required>
+            <input type="email" name="email" placeholder="Your Email" class="contact-inputs" required>
+            <textarea name="message" placeholder="Message" class="contact-inputs" required></textarea>
+            <button type="submit">Submit <img src="Assets/arrow_right_white.png" alt="arrow right" class="button-arrow"></button>
+          </form>
+        </div>
+      </section>
+    </main>
 
     <!-- ==============================
          Footer
     ================================= -->
     <footer class="footer">
-        <p class="footnote-txt">© 2024 Reality-B. All rights reserved.</p>
+      <nav class="footer">
+        <a href="#" class="footer footer__item">Privacy Policy</a>
+        <a href="#" class="footer footer__item">Terms of Use</a>
+        <a href="#" class="footer footer__item">Press Kit</a>
+      </nav>
+      <p>© 2024 Reality-B. All rights reserved.</p>
     </footer>
 
     <!-- Script for Typewriter Effect -->
     <script src="script.js"></script>
-
-</body>
-
+  </body>
 </html>
