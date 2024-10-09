@@ -14,6 +14,7 @@
     --gray50: hsl(0, 0%, 50%);
     --gray70: hsl(0, 0%, 70%);
     --gray90: hsl(0, 0%, 90%);
+    --body: hsl(0, 0%, 40%);
     --white: #f1f1f1;
     --black: #000;
     --colora: #e7b353;
@@ -107,6 +108,10 @@ h3 {
 h4 {
     font-size: var(--h4-size);
     line-height: var(--heading-line-height);
+}
+
+p {
+    color: var(--body);
 }
 
 .light {
@@ -243,9 +248,14 @@ header {
         flex-direction: column;
         align-items: center;
 
+        a {
+            display: none;
+        }
+
         nav {
             margin-top: 10px;
             width: 100%;
+            background-color: rgba(123, 123, 123, 0.25);
 
             ul {
                 display: none;
@@ -287,6 +297,7 @@ header {
         justify-content: center;
         width: 100%;
         max-width: 1440px;
+
         img {
             width: 100%;
         }
@@ -296,6 +307,12 @@ header {
         padding-bottom: 20px;
         color: var(--white);
         scale: 2;
+    }
+
+    @media screen and (max-width: 767px) {
+        .hero-reel {
+            padding-top: 32px;
+        }
     }
 }
 
@@ -308,6 +325,16 @@ header {
     p {
         max-width: 1120px;
         color: var(--gray30);
+    }
+
+    @media screen and (max-width: 767px) {
+        h2 {
+            margin-bottom: 16px;
+        }
+
+        p {
+            width: 90%;
+        }
     }
 }
 
@@ -346,6 +373,21 @@ header {
         background-color: var(--colora);
         padding: 12px;
         border-radius: 40px;
+    }
+
+    @media screen and (max-width: 767px) {
+        .award-images {
+            display: flex;
+            flex-direction: column;
+        }
+
+        h2 {
+            margin-bottom: 16px;
+        }
+
+        p {
+            width: 80%;
+        }
     }
 }
 
@@ -398,6 +440,7 @@ header {
 
 }
 
+/* ===== Contact Us Section */
 .contact {
     max-width: none;
     margin: 0;
@@ -424,6 +467,12 @@ header {
                 font-weight: 300;
             }
 
+            .names {
+                display: flex;
+                flex-direction: row;
+                gap: 16px;
+            }
+
             hr {
                 border: none;
                 width: 120px;
@@ -444,6 +493,7 @@ header {
                 color: var(--gray50);
 
             }
+
             
             .contact-inputs:focus {
                 border: 2px solid var(--colora);
@@ -480,6 +530,21 @@ header {
             button:hover {
                 text-decoration: underline;
             }
+
+            input[type="email"]:valid {
+                color: rgb(56, 158, 56);
+            }
+            
+            input[type="email"]:invalid {
+                color: rgb(178, 36, 36);
+            }
+        }
+    }
+
+    @media screen and (max-width: 767px) {
+        .contact-container {
+            padding: 20px;
+            width: 80%;
         }
     }
 }
@@ -550,10 +615,19 @@ header {
     }
 }
 
-@media (max-width: 768px) {
+@media (max-width: 767px) {
+    .services-tiles {
+        margin-top: 40px;
+    }
+    
+    h2 {
+        margin-bottom: 20px;
+    }
+    
     .services-tiles .grid-container .grid-item {
         flex: 1 1 100%; /* 1 item per row on small screens */
         max-width: 100%;
+        margin-bottom: 40px;
     }
 }
 
@@ -620,12 +694,15 @@ header {
     .skills .grid-container .grid-item {
         flex: 1 1 100%; /* 1 item per row on small screens */
         max-width: 100%;
+        margin-bottom: 40px;
+    }
+
+    .skills {
+        padding: 24px;
     }
 }
 
-
-
-/* ===== Footer ===== */
+/* ===== Projects Page ===== */
 .projects {
     display: flex;
     flex-direction: column;
@@ -656,7 +733,8 @@ header {
     .grid-item-link {
         display: flex;
         flex-direction: column;
-        width: 100%;
+        /* width: 100%; */
+        min-width: 430px;
         position: relative;
         overflow: hidden;
         padding: 4px;
@@ -686,12 +764,61 @@ header {
         opacity: .8;
     }
 
-    @media screen and (max-width: 767px) {
+    @media screen and (max-width: 1300px) {
         .grid-container {
             padding-left: 6vw;
             padding-right: 6vw;
-            grid-template-columns:repeat(1,minmax(0,1fr))
+            grid-template-columns:repeat(1,minmax(0,1fr));
         }        
+    }
+
+    @media screen and (max-width: 767px) {
+        gap: 8px;
+
+        .wrapper {
+            width: 100%; /* Make the wrapper fill the screen width */
+            padding: 0 20px; /* Add consistent padding to prevent overflow */
+            margin: 0;
+            margin-bottom: 20px;
+        }
+    
+        .grid-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            grid-template-columns: 1fr; /* Force a single column layout */
+            width: 100%; /* Ensure the grid container takes full width */
+            padding: 0; /* Remove padding */
+        }
+    
+        .grid-item {
+            width: 100%; /* Ensure each grid item takes full width */
+            max-width: 100%; /* Avoid any overflow */
+            margin: 0 auto; /* Center the grid items */
+            padding: 0; /* Ensure proper padding between grid items */
+        }
+
+        .grid-item a {
+            padding: 0;
+            width: fit-content;
+        }
+    
+        .grid-item img {
+            width: 80%; /* Make images fully responsive */
+        }
+    
+        .description {
+            padding-top: 16px;
+            text-align: start; /* Ensure descriptions are centered */
+        }
+    
+        .filter {
+            display: flex;
+            justify-content: center; /* Center filter items */
+            flex-wrap: wrap; /* Allow filter items to wrap on mobile */
+            margin-bottom: 16px; /* Add space below filter */
+        }
     }
 
     .filter {
@@ -712,12 +839,69 @@ header {
         }
 
         @media  screen and (max-width: 767px) {
-            margin: 25%;
-            align-items: center;                        
+            margin: 32px;
+            align-items: center;
+            
+            .filter {
+                justify-content: center;
+                align-items: center;
+            }
+
         }
     }
 }
 
+/* ===== BeatBox Page */
+.main-content {
+    margin-top: 64px;
+    margin-bottom: 64px;
+
+    .container {
+        display: flex;
+        flex-direction: column;
+        gap: 120px;
+
+        .group {
+            display: flex;
+            flex-direction: column;
+            margin: 0 25%;
+
+            img {
+                width: 80%;
+                align-self: center;
+                margin: 16px 0 32px;
+            }
+
+            h2 {
+                margin-bottom: 8px;
+            }
+        }
+    }
+
+    @media screen and (max-width: 767px) {
+        .container {
+            display: flex;
+            flex-direction: column;
+            margin: 24px;
+
+            .group {
+                display: flex;
+                flex-direction: column;
+                margin: 0 12px;
+
+                img {
+                    width: 75%;
+                    align-self: center;
+                }
+
+                h2 {
+                    margin-top: 16px;
+                    margin-bottom: 4px;
+                }
+            }
+        }
+    }
+}
 
 /* ===== Footer ===== */
 
