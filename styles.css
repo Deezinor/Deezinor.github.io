@@ -443,9 +443,9 @@ header {
 
 /* ===== Contact Us Section */
 .contact {
-    max-width: none;
-    margin: 0;
-    padding: 40px 0; 
+    max-width: 1200px;
+    margin: 0 25% 0;
+    padding: 40px 0;
 
     .contact-container {
         background-color: var(--gray30);
