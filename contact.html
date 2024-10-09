@@ -87,8 +87,12 @@
               <form action="" class="contact-form">
                 <h4 class="contact-form-title light">Get in touch with us!</h4>
                 <hr>
-                <input type="text" name="name" placeholder="Your Name" class="contact-inputs" required>
+                <div class="names">
+                    <input type="text" name="first-name" placeholder="First Name" class="contact-inputs" required>
+                    <input type="text" name="last-name" placeholder="Last Name" class="contact-inputs" required>
+                </div>
                 <input type="email" name="email" placeholder="Your Email" class="contact-inputs" required>
+                <input type="text" name="subject" placeholder="Message Subject" class="contact-inputs" required>
                 <textarea name="message" placeholder="Message" class="contact-inputs" required></textarea>
                 <button type="submit">Submit <img src="Assets/arrow_right_white.png" alt="arrow right" class="button-arrow"></button>
               </form>
