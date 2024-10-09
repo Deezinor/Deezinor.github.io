@@ -394,8 +394,9 @@ header {
 .team {
     display: flex;
     flex-direction: column;
-    margin: 0 auto 40px;
-    padding: 0 160px;
+    margin: 0% 25% 40px;
+    /* padding: 0 160px; */
+    max-width: 1440px;
 
     h2 {
         margin: 40px auto;
@@ -419,7 +420,7 @@ header {
             
             img {
                 width: 320px;
-                height: auto;
+                max-width: 1440px;
                 max-height: 320px;
                 margin-bottom: 20px;
                 object-fit: cover;                
