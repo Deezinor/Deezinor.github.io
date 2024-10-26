@@ -1,0 +1,36 @@
+@use 'sass:map';
+@use "colors" as *;
+@use "typography" as *;
+@use "sizes" as *;
+
+@function clr($color, $shade) {
+  @if map.has-key($colors, $color, $shade) {
+    @return map.get($colors, $color, $shade);
+  } @else {
+    @error "Invalid color or shade: #{$color} #{$shade}";
+  }
+}
+
+// Check $type-scale map for the $size-name (xs,sm, md etc...) and 
+// $font-size (100, 200 ,300 etc...) and reutrn map.get 
+@function fs($size-name, $font-size) {
+    @if map.has-key($type-scale, $size-name) {
+      $scale: map.get($type-scale, $size-name);
+      @if map.has-key($scale, $font-size) {
+        @return map.get($scale, $font-size);
+      } @else {
+        @error "Font size `#{$font-size}` doesn't exist for `#{$size-name}` scale.";
+        @error "Font size `#{$font-size}` doesn't exist for `#{$size-name}` scale.";
+      }
+    } @else {
+      @error "Scale `#{$size-name}` doesn't exist.";
+    }
+  }
+
+@function size($size) {
+  @if map.has-key($sizes, $size) {
+    @return map.get($sizes, $size);
+  } @else {
+    @error "$sizes doesn't have that size.";
+  }
+}
