@@ -1,12 +1,13 @@
 // Function to toggle the mobile menu
-function toggleMobileMenu(): void {
-    const menu = document.getElementById("menu");
-    if (menu) {
-        menu.classList.toggle("active");
-    } else {
-        console.warn("Menu element not found");
-    }
+function toggleMobileMenu() {
+  const menu = document.getElementById('menu'); // Select the menu by its ID
+  if (menu) {
+    menu.classList.toggle('active'); // Toggle the 'active' class
+  }
 }
+
+// Ensure that the function is accessible in the global scope
+(window as any).toggleMobileMenu = toggleMobileMenu; 
   
   // Function to filter the project grid based on the selected category
   const filterLinks = document.querySelectorAll<HTMLAnchorElement>('.filter-list-item a');

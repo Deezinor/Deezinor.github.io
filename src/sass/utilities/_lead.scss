@@ -1,0 +1,12 @@
+@use "../abstracts" as *;
+
+.lead {
+  font-size: fs(400);
+  font-weight: $fw-400;
+  color: clr(neutral, 100);
+  text-transform: none;
+
+  & + p {
+    margin-top: 0;
+  }
+}

@@ -1,0 +1,45 @@
+@use "../abstracts/" as *;
+
+.hero {
+  padding-block: $hero-padding;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  min-height: 100vh;
+
+  &__home {
+    background-image: url("../../Assets/BBVR_logo.gif");
+  }
+
+  &__services {
+    background-image: url("../../Assets/charlesdeluvio-Lks7vei-eAg-unsplash.jpg");
+    min-width: 100%;
+  }
+
+  &__projects {
+    background-image: url("../../Assets/customize_environment.gif");
+    min-width: 100%;
+  }
+
+  &__beatbox {
+    background-image: url("../../Assets/BBVR_logo.gif");
+    min-width: 100%;
+  }
+
+  h1 {
+    margin-block-end: size(36);
+  }
+
+  @include mq(small) {
+    padding: 0;
+    min-height: 30vh;
+  }
+  @include mq(medium) {
+    padding: 0;
+    min-height: 50vh;
+  }
+  @include mq(large) {
+    padding: 0;
+    min-height: 100vh;
+  }
+}

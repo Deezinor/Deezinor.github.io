@@ -1,9 +1,10 @@
 @use "sass:math";
 
 $ff-base: "DM Sans", Sans-serif;
-// $ff-accent: "Open Sans", Sans-serif;
 
 $fw-400: 400;
+$fw-500: 500;
+$fw-600: 600;
 $fw-700: 700;
 
 $base-font-size-xs: 1rem; // 16px
@@ -14,45 +15,37 @@ $base-font-size-xl: 1.602rem; // 2*px
 
 $perfect-fourth: 1.333; // Perfect Fourth scale factor
 
-$type-scale: (
-  xs: (
-    100: $base-font-size-xs * math.pow($perfect-fourth, 0),
-    200: $base-font-size-xs * math.pow($perfect-fourth, 1),
-    300: $base-font-size-xs * math.pow($perfect-fourth, 2),
-    400: $base-font-size-xs * math.pow($perfect-fourth, 3),
-    500: $base-font-size-xs * math.pow($perfect-fourth, 4),
-    600: $base-font-size-xs * math.pow($perfect-fourth, 5),
+$font-sizes: (
+  300: (
+    size: 0.75rem,
+    line-height: 1.6,
   ),
-  sm: (
-    100: $base-font-size-sm * math.pow($perfect-fourth, 0),
-    200: $base-font-size-sm * math.pow($perfect-fourth, 1),
-    300: $base-font-size-sm * math.pow($perfect-fourth, 2),
-    400: $base-font-size-sm * math.pow($perfect-fourth, 3),
-    500: $base-font-size-sm * math.pow($perfect-fourth, 4),
-    600: $base-font-size-sm * math.pow($perfect-fourth, 5),
+  // Smaller than base
+  400:
+    (
+      size: 1rem,
+      line-height: 1.6,
+    ),
+  // Base size
+  500:
+    (
+      size: 1.333rem,
+      line-height: 1.15,
+    ),
+  600: (
+    size: 1.777rem,
+    line-height: 1.15,
   ),
-  md: (
-    100: $base-font-size-md * math.pow($perfect-fourth, 0),
-    200: $base-font-size-md * math.pow($perfect-fourth, 1),
-    300: $base-font-size-md * math.pow($perfect-fourth, 2),
-    400: $base-font-size-md * math.pow($perfect-fourth, 3),
-    500: $base-font-size-md * math.pow($perfect-fourth, 4),
-    600: $base-font-size-md * math.pow($perfect-fourth, 5),
+  700: (
+    size: 2.369rem,
+    line-height: 1.15,
   ),
-  lg: (
-    100: $base-font-size-lg * math.pow($perfect-fourth, 0),
-    200: $base-font-size-lg * math.pow($perfect-fourth, 1),
-    300: $base-font-size-lg * math.pow($perfect-fourth, 2),
-    400: $base-font-size-lg * math.pow($perfect-fourth, 3),
-    500: $base-font-size-lg * math.pow($perfect-fourth, 4),
-    600: $base-font-size-lg * math.pow($perfect-fourth, 5),
+  800: (
+    size: 3.157rem,
+    line-height: 1.15,
   ),
-  xl: (
-    100: $base-font-size-xl * math.pow($perfect-fourth, 0),
-    200: $base-font-size-xl * math.pow($perfect-fourth, 1),
-    300: $base-font-size-xl * math.pow($perfect-fourth, 2),
-    400: $base-font-size-xl * math.pow($perfect-fourth, 3),
-    500: $base-font-size-xl * math.pow($perfect-fourth, 4),
-    600: $base-font-size-xl * math.pow($perfect-fourth, 5),
+  900: (
+    size: 3.157rem,
+    line-height: 1.15,
   ),
 );

@@ -1,0 +1,22 @@
+@use "../abstracts/" as *;
+
+.primary-navigation {
+  display: flex;                          // Use flexbox for alignment
+  justify-content: space-between;         // Space items evenly
+  align-content: center;                    // Center items vertically
+  background-color: #000;                 // Optional: set background color
+
+  li {
+    list-style: none;
+
+    a {
+      text-decoration: none;
+      color: clr(neutral, 100);
+
+      &:hover, &:focus {
+        text-decoration: underline;
+      }
+    }
+  }
+}
+

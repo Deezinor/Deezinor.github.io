@@ -1,5 +1,17 @@
 @use "../abstracts" as *;
 
+.section {
+  padding-block: $section-padding;
+}
+
+.mx-auto {
+  margin-inline: auto;
+}
+
+.paragraph {
+  max-width: 65ch;
+}
+
 @each $size-name, $size-value in $sizes {
   .margin {
     &-#{$size-name} {

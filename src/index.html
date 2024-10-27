@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <!-- Tab Icon -->
     <link rel="icon" type="image/jpg" href="./Assets/R_Icon.png" />
-    
+
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Reality-B</title>
 
@@ -16,200 +16,136 @@
       rel="stylesheet"
     />
 
-    <script type="module" src="/script.ts"></script>
-    <script type="module" src="/main.ts"></script>
-    <link rel="stylesheet" href="/sass/main.scss" />
+    <link rel="stylesheet" href="/src/sass/main.scss" />
   </head>
   <body>
-    <!-- ==============================
-         Navigation
-    ================================= -->
-    <header class="navigation">
-      <a href="index.html" class="logo-holder">
-        <h1 class="logo">REALITY-B</h1>
-      </a>
-      <nav class="nav-bar">
-        <ul id="menu">
-          <li>
-            <a href="index.html" class="navigation-item">HOME</a>
-          </li>
-          <li>
-            <a href="Services.html" class="navigation-item">SERVICES</a>
-          </li>
-          <li>
-            <a href="Projects.html" class="navigation-item">PROJECTS</a>
-          </li>
-          <li>
-            <a href="About.html" class="navigation-item">ABOUT US</a>
-          </li>
-          <li>
-            <a href="contact.html" class="navigation-item contact button"
-              >CONTACT US</a
-            >
-          </li>
-        </ul>
-        <a href="#" class="mobile-toggle" onClick="toggleMobileMenu();">
-          <svg
-            class="w-6 h-6 text-gray-800 dark:text-white"
-            aria-hidden="true"
-            xmlns="http://www.w3.org/2000/svg"
-            width="24"
-            height="24"
-            fill="none"
-            viewBox="0 0 24 24"
-          >
-            <path
-              stroke="currentColor"
-              stroke-linecap="round"
-              stroke-width="2"
-              d="M5 7h14M5 12h14M5 17h14"
-            />
-          </svg>
-        </a>
-      </nav>
-    </header>
-
     <main>
-      <section class="hero container">
-        <div class="hero-reel">
-          <img
-            src="/Assets/BBVR_logo.gif"
-            alt="BeatBoxVR Logo"
-            class="demo-reel"
-            width="100%"
-          />
-        </div>
-      </section>
+      <section
+        class="[ hero hero__home ] [ clr-neutral-100 text-center ]"
+      ></section>
 
-      <section class="about container">
-        <h2>About Us</h2>
-        <p>
-          We are a startup founded by an assorted team of Master's Graduates in
-          VR and AR. Our unique blend of expertise comes from diverse cultural
-          and educational backgrounds, allowing us to bring fresh perspectives
-          and create innovative XR solutions across various genres.
-        </p>
-      </section>
-
-      <section class="awards dark-background container">
-        <h2 class="awards-title light">Awards</h2>
-        <div class="award-images grid">
-          <div class="grid-item">
-            <img
-              src="/Assets/ukri-innovate-uk-square-logo.png"
-              alt="Innovate UK Logo"
-            />
-            <p class="award-title">Jury Prize Winner</p>
-          </div>
-          <div class="grid-item">
-            <img src="/Assets/XR Hack.svg" alt="XR Hack Logo" />
-            <p class="award-title">Runner's Up</p>
-          </div>
-          <div class="grid-item">
-            <img
-              class="Digital-heritage"
-              src="/Assets/digital heritage.jpg"
-              alt="Digital Heritage Logo"
-            />
-            <p class="award-title">Jury Prize Winner</p>
-          </div>
-        </div>
-        <p class="awards-paragraph">
-          We have been awarded multiple awards from organisation and
-          competitions in different countries across the globe.
-        </p>
-        <p class="awards-paragraph">
-          Get in touch to start the process of designing a high-quality one-off
-          experience.
-        </p>
-        <a href="contact.html" class="contact-button button">Contact Us</a>
-      </section>
-
-      <section class="team">
-        <h2>THE TEAM</h2>
-        <div class="grid">
-          <div class="grid-item">
-            <img src="Assets/Graduation photo.jpg" alt="" />
-            <h4>JAKE BOULTON</h4>
-            <p class="small-font">UX / XR DESIGNER</p>
-          </div>
-          <div class="grid-item">
-            <img src="Assets/Mai.jpeg" alt="" />
-            <h4>MAI YE</h4>
-            <p class="small-font">UNITY DEVELOPER</p>
-          </div>
-          <div class="grid-item">
-            <img src="Assets/Nathan.jpeg" alt="" />
-            <h4>NATHAN THOMAS-BENKE</h4>
-            <p class="small-font">UNITY DEVELOPER</p>
-          </div>
-          <div class="grid-item">
-            <img src="Assets/Hwanjoon.jpeg" alt="" />
-            <h4>HWANJOON JANG</h4>
-            <p class="small-font">UNITY DEVELOPER</p>
-          </div>
-          <div class="grid-item">
-            <img src="Assets/Josh.jpeg" alt="" />
-            <h4>JOSHUA DAVIES</h4>
-            <p class="small-font">UNITY DEVELOPER</p>
-          </div>
-          <div class="grid-item">
-            <img src="Assets/Mo.jpeg" alt="" />
-            <h4>MO EL ELYRAN</h4>
-            <p class="small-font">XR DESIGNER</p>
+      <section class="[ about ] [ section ]" id="about">
+        <div class="[ container ]">
+          <div class="[ text-center ]">
+            <h1 class="[ section-header fs-900 clr-neutral-800 ]">
+              Let us help bring your ideas to life.
+            </h1>
+            <!-- <h2 class="[ fs-700 clr-neutral-800 margin-block-end-20]">
+              About Us
+            </h2> -->
+            <p class="[ ff-500 paragraph mx-auto ]">
+              We are a startup founded by an assorted team of Master's Graduates
+              in VR and AR. Our unique blend of expertise comes from diverse
+              cultural and educational backgrounds, allowing us to bring fresh
+              perspectives and create innovative XR solutions across various
+              genres.
+            </p>
           </div>
         </div>
       </section>
 
-      <section class="contact dark-background container">
-        <div class="contact-container">
-          <h2 class="contact-title light">Contact Us</h2>
-          <form action="" class="contact-form">
-            <h4 class="contact-form-title light">Get in touch with us!</h4>
-            <hr />
-            <input
-              type="text"
-              name="name"
-              placeholder="Your Name"
-              class="contact-inputs"
-              required
-            />
-            <input
-              type="email"
-              name="email"
-              placeholder="Your Email"
-              class="contact-inputs"
-              required
-            />
-            <textarea
-              name="message"
-              placeholder="Message"
-              class="contact-inputs"
-              required
-            ></textarea>
-            <button type="submit">
-              Submit
+      <section
+        class="[ awards ] [ section clr-neutral-100 bg-neutral-800 text-center ]"
+      >
+        <div class="[ container ]">
+          <h2 class="[ section-header fs-700 ]">Awards</h2>
+          <div class="[ even-columns align-items-center margin-block-end-48 ]">
+            <div class="award-card">
               <img
-                src="Assets/arrow_right_white.png"
-                alt="arrow right"
-                class="button-arrow"
+                class="logo__medium"
+                src="/Assets/ukri-innovate-uk-square-logo.png"
+                alt="Innovate UK Logo"
               />
-            </button>
-          </form>
+              <h3>Innovate UK: Immersive Tech Awards 2024</h3>
+              <p>Jury Prize Winner</p>
+            </div>
+            <div class="award-card">
+              <img
+                class="logo__medium"
+                src="/Assets/XR Hack.svg"
+                alt="XR Hack Logo"
+              />
+              <h3>XR Hack: Istanbul</h3>
+              <p>Runner's Up</p>
+            </div>
+            <div class="award-card">
+              <img
+                class="logo__medium"
+                class="Digital-heritage"
+                src="/Assets/digital heritage.jpg"
+                alt="Digital Heritage Logo"
+              />
+              <h3>Digital Heritage 2024</h3>
+              <p>
+                Best Us of Technology <br />
+                Winner
+              </p>
+            </div>
+          </div>
+          <p class="margin-block-start-20 clr-neutral-500">
+            We have been awarded multiple awards from organisation and
+            competitions in different countries across the globe.
+          </p>
+          <p class="margin-block-end-48 clr-neutral-500">
+            Get in touch to start the process of designing a high-quality
+            one-off experience.
+          </p>
+          <a href="#contact" class="button" data-type="accent">Contact Us</a>
+        </div>
+      </section>
+
+      <section class="[ team ] [ section clr-neutral-800 text-center ]">
+        <h2 class="[ section-header fs-700 ]">THE TEAM</h2>
+        <div class="container">
+          <div class="grid-layout">
+            <div class="team-card">
+              <img src="Assets/Graduation photo.jpg" alt="" />
+              <h4>JAKE BOULTON</h4>
+              <p>UX / XR DESIGNER</p>
+            </div>
+            <div class="team-card">
+              <img src="Assets/Mai.jpeg" alt="" />
+              <h4>MAI YE</h4>
+              <p>UNITY DEVELOPER</p>
+            </div>
+            <div class="team-card">
+              <img src="Assets/Nathan.jpeg" alt="" />
+              <h4>NATHAN THOMAS-BENKE</h4>
+              <p>UNITY DEVELOPER</p>
+            </div>
+            <div class="team-card">
+              <img src="Assets/Hwanjoon.jpeg" alt="" />
+              <h4>HWANJOON JANG</h4>
+              <p>UNITY DEVELOPER</p>
+            </div>
+            <div class="team-card">
+              <img src="Assets/Josh.jpeg" alt="" />
+              <h4>JOSHUA DAVIES</h4>
+              <p>UNITY DEVELOPER</p>
+            </div>
+            <div class="team-card">
+              <img src="Assets/Mo.jpeg" alt="" />
+              <h4>MO EL ELYRAN</h4>
+              <p>XR DESIGNER</p>
+            </div>
+          </div>
         </div>
       </section>
     </main>
-
-    <!-- ==============================
-         Footer
-    ================================= -->
-    <footer class="footer">
-      <nav class="footer">
-        <a href="#" class="footer footer__item">Privacy Policy</a>
-        <a href="#" class="footer footer__item">Terms of Use</a>
-        <a href="#" class="footer footer__item">Press Kit</a>
-      </nav>
-      <p>© 2024 Reality-B. All rights reserved.</p>
+    <footer
+      class="[ primary-footer ] [ bg-neutral-800 clr-neutral-100 text-center flow ]"
+    >
+      <div class="container">
+        <nav class="flex-between">
+          <a style="text-decoration: none" href="#">Privacy Policy</a>
+          <a style="text-decoration: none" href="#">Terms of Use</a>
+          <a style="text-decoration: none" href="#">Press Kit</a>
+        </nav>
+        <p>© 2024 Reality-B. All rights reserved.</p>
+      </div>
     </footer>
+
+    <script type="module" src="/main.ts"></script>
+    <script type="module" src="/script.ts"></script>
   </body>
 </html>

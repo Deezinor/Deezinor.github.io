@@ -1,31 +1,19 @@
-@use 'sass:map';
+@use "sass:map";
 @use "colors" as *;
 @use "typography" as *;
 @use "sizes" as *;
 
 @function clr($color, $shade) {
-  @if map.has-key($colors, $color, $shade) {
-    @return map.get($colors, $color, $shade);
+  @if map.has-key($colors, $color) {
+    @if map.has-key(map.get($colors, $color), $shade) {
+      @return map.get(map.get($colors, $color), $shade);
+    } @else {
+      @error "Invalid shade: #{$shade} for color: #{$color}";
+    }
   } @else {
-    @error "Invalid color or shade: #{$color} #{$shade}";
+    @error "Invalid color: #{$color}";
   }
 }
-
-// Check $type-scale map for the $size-name (xs,sm, md etc...) and 
-// $font-size (100, 200 ,300 etc...) and reutrn map.get 
-@function fs($size-name, $font-size) {
-    @if map.has-key($type-scale, $size-name) {
-      $scale: map.get($type-scale, $size-name);
-      @if map.has-key($scale, $font-size) {
-        @return map.get($scale, $font-size);
-      } @else {
-        @error "Font size `#{$font-size}` doesn't exist for `#{$size-name}` scale.";
-        @error "Font size `#{$font-size}` doesn't exist for `#{$size-name}` scale.";
-      }
-    } @else {
-      @error "Scale `#{$size-name}` doesn't exist.";
-    }
-  }
 
 @function size($size) {
   @if map.has-key($sizes, $size) {
@@ -33,4 +21,26 @@
   } @else {
     @error "$sizes doesn't have that size.";
   }
+}
+
+// Function to get font size from the map
+@function fs($size-key) {
+  // Check if the size key exists in the font sizes map
+  @if not map.has-key($font-sizes, $size-key) {
+    @error "Font size key '#{$size-key}' not found in the font sizes map.";
+  }
+
+  // Get the font size from the map
+  @return map.get(map.get($font-sizes, $size-key), size);
+}
+
+// Function to get line height from the map
+@function lh($size-key) {
+  // Check if the size key exists in the font sizes map
+  @if not map.has-key($font-sizes, $size-key) {
+    @error "Line height key '#{$size-key}' not found in the font sizes map.";
+  }
+
+  // Get the line height from the map
+  @return map.get(map.get($font-sizes, $size-key), line-height);
 }

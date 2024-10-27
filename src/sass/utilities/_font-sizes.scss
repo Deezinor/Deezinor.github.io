@@ -1,9 +1,3 @@
-@use '../abstracts' as *; 
+@use "../abstracts" as *;
 
-@each $size-name, $size-value in $type-scale {
-  @each $key, $value in $size-value {
-    .text-#{$size-name}-#{$key} {
-      font-size: $value;
-    }
-  }
-}
+@include responsive-font-sizes;

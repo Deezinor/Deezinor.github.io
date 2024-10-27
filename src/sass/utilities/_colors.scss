@@ -2,7 +2,7 @@
 
 @each $color, $shade-map in $colors {
   @each $shade, $value in $shade-map {
-    .text-#{$color}-#{$shade} {
+    .clr-#{$color}-#{$shade} {
       color: $value;
     }
     .bg-#{$color}-#{$shade} {

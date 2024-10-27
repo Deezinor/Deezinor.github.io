@@ -1,0 +1,31 @@
+/* styles.scss or your main CSS file */
+@use "../abstracts/" as *;
+
+#menu {
+  display: flex; // Default to flex display
+  flex-direction: row; // Layout items in a row
+}
+
+.mobile-toggle {
+  display: none; // Hide the toggle by default
+  cursor: pointer; // Change cursor to pointer
+  margin-right: size(48);
+  scale: 2;
+  color: clr(neutral, 100);
+}
+
+@media (max-width: 870px) {
+  // Adjust this breakpoint as needed
+  #menu {
+    display: none; // Hide the navigation items on smaller screens
+  }
+
+  #menu.active {
+    display: flex; // Show the menu when active
+    flex-direction: column; // Stack items vertically
+  }
+
+  .mobile-toggle {
+    display: block; // Show the toggle icon
+  }
+}

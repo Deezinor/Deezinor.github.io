@@ -1,0 +1,30 @@
+@use "../abstracts/" as *;
+
+.team-card {
+  min-width: 250px;
+  justify-content: center;
+  text-align: center;
+  background-color: clr(neutral, 400);
+
+  img {
+    margin-inline: size(16);
+    width: 15rem;
+    max-height: 15rem;
+    object-fit: cover;
+    margin-block: size(24);
+  }
+
+  h4 {
+    font-size: fs(500);
+    font-weight: $fw-500;
+    color: clr(neutral, 900);
+    margin-block-end: calc(size(8) / 2);
+  }
+
+  p {
+    font-size: fs(300);
+    font-weight: $fw-400;
+    color: clr(neutral, 700);
+    margin-block-end: size(16);
+  }
+}

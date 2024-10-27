@@ -1,0 +1,14 @@
+.logo {
+  height: auto; // Default height
+  text-decoration: none;
+
+  &__small {
+    width: 3.125rem;
+  }
+  &__medium {
+    width: 10rem;
+  }
+  &__large {
+    width: 12.5rem;
+  }
+}

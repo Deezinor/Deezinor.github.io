@@ -1,0 +1,14 @@
+@use "../abstracts/" as *;
+
+.primary-footer {
+  padding-block: size(32);
+  nav {
+    margin-block-end: size(24); 
+    a {
+      color: clr(neutral, 100);
+    }
+  }
+  p {
+    font-size: fs(300);
+  }
+}

@@ -1,6 +1,6 @@
-// .flow > *:where(:not(:first-child)) {
-//   margin-top: car(--flow-spacer, 1rem);
-// }
+.flow > *:where(:not(:first-child)) {
+  margin-top: car(--flow-spacer, 1rem);
+}
 
 // .flow[data-spacing="small"] {
 //   --flow-spacer: .25rem;
