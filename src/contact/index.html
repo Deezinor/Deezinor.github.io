@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Reality B</title>
+    <title>Contact Us</title>
 
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -16,14 +16,10 @@
     <!-- Stylesheet -->
     <link rel="stylesheet" href="styles.css" />
 
-    <!-- Scripts -->
-    <script src="./script.js"></script>
-
     <!-- Tab Icon -->
     <link rel="icon" type="image/jpg" href="./Assets/R_Icon.png" />
   </head>
-
-  <body class="index-page">
+  <body>
     <!-- ==============================
          Navigation
     ================================= -->
@@ -84,25 +80,60 @@
         </div>
       </section>
 
-      <section>
-        <div class="company-description">
-          <h3>Who we are</h3>
-          <p>
-            We are a startup founded by an assorted team of Master’s Graduates
-            in VR and AR. Our unique blend of expertise comes from diverse
-            cultural and educational backgrounds, allowing us to bring fresh
-            perspectives and create innovative XR solutions across various
-            genres.
-          </p>
-          <h3>What we do</h3>
-          <p>We offer Extended Reality design and development services.</p>
+      <section class="contact dark-background container">
+        <div class="contact-container">
+          <h2 class="contact-title light">Contact Us</h2>
+          <form action="" class="contact-form">
+            <h4 class="contact-form-title light">Get in touch with us!</h4>
+            <hr />
+            <div class="names">
+              <input
+                type="text"
+                name="first-name"
+                placeholder="First Name"
+                class="contact-inputs"
+                required
+              />
+              <input
+                type="text"
+                name="last-name"
+                placeholder="Last Name"
+                class="contact-inputs"
+                required
+              />
+            </div>
+            <input
+              type="email"
+              name="email"
+              placeholder="Your Email"
+              class="contact-inputs"
+              required
+            />
+            <input
+              type="text"
+              name="subject"
+              placeholder="Message Subject"
+              class="contact-inputs"
+              required
+            />
+            <textarea
+              name="message"
+              placeholder="Message"
+              class="contact-inputs"
+              required
+            ></textarea>
+            <button type="submit">
+              Submit
+              <img
+                src="Assets/arrow_right_white.png"
+                alt="arrow right"
+                class="button-arrow"
+              />
+            </button>
+          </form>
         </div>
       </section>
     </main>
-
-    <!-- ==============================
-         Footer
-    ================================= -->
     <footer class="footer">
       <nav class="footer">
         <a href="#" class="footer footer__item">Privacy Policy</a>
@@ -111,8 +142,7 @@
       </nav>
       <p>© 2024 Reality-B. All rights reserved.</p>
     </footer>
-
-    <!-- Script for Typewriter Effect -->
-    <script src="script.js"></script>
+    <script type="module" src="/main.ts"></script>
+    <script type="module" src="/script.ts"></script>
   </body>
 </html>

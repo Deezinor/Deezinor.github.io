@@ -1,0 +1,46 @@
+@use "sass:map";
+@use "colors" as *;
+@use "typography" as *;
+@use "sizes" as *;
+
+@function clr($color, $shade) {
+  @if map.has-key($colors, $color) {
+    @if map.has-key(map.get($colors, $color), $shade) {
+      @return map.get(map.get($colors, $color), $shade);
+    } @else {
+      @error "Invalid shade: #{$shade} for color: #{$color}";
+    }
+  } @else {
+    @error "Invalid color: #{$color}";
+  }
+}
+
+@function size($size) {
+  @if map.has-key($sizes, $size) {
+    @return map.get($sizes, $size);
+  } @else {
+    @error "$sizes doesn't have that size.";
+  }
+}
+
+// Function to get font size from the map
+@function fs($size-key) {
+  // Check if the size key exists in the font sizes map
+  @if not map.has-key($font-sizes, $size-key) {
+    @error "Font size key '#{$size-key}' not found in the font sizes map.";
+  }
+
+  // Get the font size from the map
+  @return map.get(map.get($font-sizes, $size-key), size);
+}
+
+// Function to get line height from the map
+@function lh($size-key) {
+  // Check if the size key exists in the font sizes map
+  @if not map.has-key($font-sizes, $size-key) {
+    @error "Line height key '#{$size-key}' not found in the font sizes map.";
+  }
+
+  // Get the line height from the map
+  @return map.get(map.get($font-sizes, $size-key), line-height);
+}

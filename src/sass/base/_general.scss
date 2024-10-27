@@ -1,0 +1,15 @@
+@use '../abstracts/' as *;
+
+body {
+    font-family: $ff-base, sans-serif;
+    font-weight: $fw-400;
+    font-size: fs(400);
+    color: clr(neutral, 600);
+    line-height: 1.5;
+}
+
+.filter {
+    li {
+        list-style: none;
+    }
+}

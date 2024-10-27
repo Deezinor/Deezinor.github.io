@@ -1,0 +1,21 @@
+@use "../abstracts/" as *;
+
+.even-columns {
+  display: grid;
+  gap: var(--grid-gap, $grid-gap);
+
+  @include mq(medium) {
+    grid-auto-flow: column;
+    grid-auto-columns: 1fr;
+
+    gap: max(2rem, var(--grid-gap, $grid-gap));
+  }
+}
+
+.flex-even-columns {
+  display: flex;
+  flex-wrap: wrap;
+  gap: max(2rem, var(--grid-gap, $grid-gap));
+  column-gap: max(2rem, var(--grid-gap, $grid-gap));
+  row-gap: max(2rem, calc(var(--grid-gap, $grid-gap) / 2));
+}

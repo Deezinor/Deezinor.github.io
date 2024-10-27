@@ -1,0 +1,23 @@
+@use "../abstracts/" as *;
+
+.software-tile {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+  img {
+    width: 100px;
+    height: 100px;
+  }
+
+  &svg {
+    color: clr(neutral, 100);
+  }
+
+  h2 {
+    font-size: fs(600);
+    font-weight: $fw-600;
+    margin-block-start: size(24);
+    color: clr(neutral, 200);
+  }
+}

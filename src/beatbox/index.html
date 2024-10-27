@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <!-- Tab Icon -->
+    <link rel="icon" type="image/jpg" href="./Assets/R_Icon.png" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>BeatBox-VR</title>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100..900&family=Roboto:wght@100;300;400;500;700;900&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="/sass/main.scss" />
+  </head>
+  <body>
+    <header
+      class="[ navigation ] [ bg-neutral-900 padding-block-36 align-items-center ]"
+    >
+      <div class="[ logo ] [ flex-between align-items-center ]">
+        <div class="align-items-center margin-inline-start-24">
+          <a href="index.html" class="[ logo ]">
+            <h1 class="[ logo ] [ fs-700 clr-neutral-100 ]">REALITY-B</h1>
+          </a>
+        </div>
+        <div class="[ align-items-center ]">
+          <nav class="[ primary-navigation ]">
+            <ul class="[ flex-group margin-inline-end-24 ]" id="menu">
+              <div class="flex-even-columns align-items-center">
+                <li>
+                  <a href="index.html">HOME</a>
+                </li>
+                <li>
+                  <a href="services/">SERVICES</a>
+                </li>
+                <li>
+                  <a href="projects/">PROJECTS</a>
+                </li>
+                <li>
+                  <a href="about/">ABOUT US</a>
+                </li>
+              </div>
+              <div>
+                <li>
+                  <a class="button" data-type="accent" href="contact/"
+                    >CONTACT US</a
+                  >
+                </li>
+              </div>
+            </ul>
+            <a href="#" class="mobile-toggle" onClick="toggleMobileMenu();">
+              <svg
+                class="w-6 h-6 text-gray-800 dark:text-white"
+                aria-hidden="true"
+                xmlns="http://www.w3.org/2000/svg"
+                width="24"
+                height="24"
+                fill="none"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  stroke="currentColor"
+                  stroke-linecap="round"
+                  stroke-width="2"
+                  d="M5 7h14M5 12h14M5 17h14"
+                />
+              </svg>
+            </a>
+          </nav>
+        </div>
+      </div>
+    </header>
+
+    <main>
+      <section class="hero hero__beatbox"></section>
+
+      <section class="section main-content">
+        <div class="container">
+          <div class="beatbox-tile">
+            <img src="../Assets/freeplay_Original.gif" />
+            <h2 class="fs-600 clr-neutral-900">Concept</h2>
+            <p class="fs-400 clr-neutral-500">
+              "BeatBox-VR" is a virtual reality drumming experience that allows
+              players to play and interact with a full drum set in a 3D
+              environment. Inspired by the power of music and the immersive
+              capabilities of VR technology, our objective was to create a game
+              that not only teaches the fundamentals of drumming but also
+              provides an entertaining platform for advanced musicians to
+              practice and perform.
+            </p>
+          </div>
+          <div class="beatbox-tile">
+            <iframe
+              width="560"
+              height="315"
+              src="https://www.youtube.com/embed/oBdALCK0mpA?si=hGvFXARqQQFWRMmz"
+              title="YouTube video player"
+              frameborder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+              referrerpolicy="strict-origin-when-cross-origin"
+              allowfullscreen
+            ></iframe>
+            <h2 class="fs-600 clr-neutral-900">Game Modes</h2>
+            <p class="fs-400 clr-neutral-500">
+              Beatbox VR offers four play modes: Free Mode for casual drumming,
+              Tutorial Mode for skill-building, Play-along Mode for playing with
+              your favorite songs, and Play Mode for rhythm-based challenges.
+              These modes cover a wide range of player styles and skill levels,
+              providing a complete drumming experience in VR.
+            </p>
+          </div>
+          <div class="beatbox-tile">
+            <img src="../Assets/customize_environment.gif" />
+            <h2 class="fs-600 clr-neutral-900">Customisation</h2>
+            <p class="fs-400 clr-neutral-500">
+              The player can also set up their desired experience depending on
+              what they're looking for in BeatBoxVR. In the customization
+              settings, you can toggle settings like animations, haptics, and
+              VFX allowing for people to decide their desired level of realism.
+              Additionally, you can select from a variety of drum kit cosmetics
+              and environments.
+            </p>
+          </div>
+        </div>
+      </section>
+    </main>
+    <footer class="footer">
+      <nav class="footer">
+        <a href="#" class="footer footer__item">Privacy Policy</a>
+        <a href="#" class="footer footer__item">Terms of Use</a>
+        <a href="#" class="footer footer__item">Press Kit</a>
+      </nav>
+      <p>© 2024 Reality-B. All rights reserved.</p>
+    </footer>
+    <script type="module" src="/main.ts"></script>
+    <script type="module" src="/script.ts"></script>
+  </body>
+</html>

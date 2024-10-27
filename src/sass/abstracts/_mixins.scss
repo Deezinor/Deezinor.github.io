@@ -1,0 +1,68 @@
+@use "sass:math";
+@use "sass:meta";
+@use "sass:map";
+@use "breakpoints" as *;
+@use "typography" as *;
+
+@mixin mq($size) {
+  @if map.has-key($breakpoints, $size) {
+    $breakpoint: map.get($breakpoints, $size);
+    @media screen and (min-width: $breakpoint) {
+      @content;
+    }
+  } @else if meta.type-of($size) == number {
+    @if math.is-unitless($size) {
+      @error '$size must be a number';
+    } @else {
+      @media screen and (min-width: $size) {
+        @content;
+      }
+    }
+  } @else {
+    @error '{$size} must be a valid breakpoint key or a number you out #{$size}.';
+  }
+}
+
+// Mixin to generate font size and line-height classes
+// abstracts/_mixins.scss
+@mixin responsive-font-sizes {
+  @each $size-key, $size-values in $font-sizes {
+    .fs-#{$size-key} {
+      font-size: #{map.get($size-values, size)};
+      line-height: #{map.get($size-values, line-height)};
+    }
+  }
+
+  // Responsive scaling
+  @media screen and (min-width: 348px) {
+    @each $size-key, $size-values in $font-sizes {
+      .fs-#{$size-key} {
+        font-size: calc(#{map.get($size-values, size)} * 0.9);
+      }
+    }
+  }
+
+  @media screen and (min-width: 768px) {
+    @each $size-key, $size-values in $font-sizes {
+      .fs-#{$size-key} {
+        font-size: calc(#{map.get($size-values, size)} * 1);
+      }
+    }
+  }
+
+  @media screen and (min-width: 992px) {
+    @each $size-key, $size-values in $font-sizes {
+      .fs-#{$size-key} {
+        font-size: calc(#{map.get($size-values, size)} * 1.1);
+      }
+    }
+  }
+
+  @media screen and (min-width: 1200px) {
+    @each $size-key, $size-values in $font-sizes {
+      .fs-#{$size-key} {
+        font-size: calc(#{map.get($size-values, size)} * 1.2);
+      }
+    }
+  }
+}

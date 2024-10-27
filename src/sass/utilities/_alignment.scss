@@ -1,0 +1,14 @@
+.flex-between {
+  display: flex;
+  justify-content: space-between;
+}
+
+.align-items-center {
+  align-content: center;
+}
+
+.center {
+  display: flex; // Enable flexbox layout
+  justify-content: center; // Center contents horizontally
+  align-content: center; // Center contents vertically
+}

@@ -1,0 +1,51 @@
+@use "sass:math";
+
+$ff-base: "DM Sans", Sans-serif;
+
+$fw-400: 400;
+$fw-500: 500;
+$fw-600: 600;
+$fw-700: 700;
+
+$base-font-size-xs: 1rem; // 16px
+$base-font-size-sm: 1.125rem; // 18px
+$base-font-size-md: 1.266rem; // 20.25px
+$base-font-size-lg: 1.424rem; // 2*px
+$base-font-size-xl: 1.602rem; // 2*px
+
+$perfect-fourth: 1.333; // Perfect Fourth scale factor
+
+$font-sizes: (
+  300: (
+    size: 0.75rem,
+    line-height: 1.6,
+  ),
+  // Smaller than base
+  400:
+    (
+      size: 1rem,
+      line-height: 1.6,
+    ),
+  // Base size
+  500:
+    (
+      size: 1.333rem,
+      line-height: 1.15,
+    ),
+  600: (
+    size: 1.777rem,
+    line-height: 1.15,
+  ),
+  700: (
+    size: 2.369rem,
+    line-height: 1.15,
+  ),
+  800: (
+    size: 3.157rem,
+    line-height: 1.15,
+  ),
+  900: (
+    size: 3.157rem,
+    line-height: 1.15,
+  ),
+);
