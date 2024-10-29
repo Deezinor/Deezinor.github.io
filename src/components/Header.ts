@@ -1,3 +1,5 @@
+import '../src/sass/main.scss'; 
+
 export class Header {
   private element: HTMLElement;
 
